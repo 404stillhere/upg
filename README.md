@@ -139,6 +139,19 @@ Models with known drift (Claude line, DeepSeek, Grok, ERNIE, Qwen) get compensat
 
 The v12.1 campaign audit surfaced two validation blind spots (L7 density counting, L7.5 lens-aspect compat), both closed in patch v9.22 and inherited by v10.
 
+**Image-gen rendering** (same prompt, varied renderer — score 0–10, S5 is the hardest slot):
+
+| # | Model | Score | S5 | Status | Role |
+|---|---|---|---|---|---|
+| 🥇 | 🐸🎨 **GPT-image-1.5-HF** | **8.75** | ✅ 9/10 | 🟢 | Primary |
+| 🥈 | 🔥🛠️ **Flux-2-dev** | 8.4 | ✅ 8/10 | 🟢 | Iterations |
+| 🥉 | 🔥💪 **Flux-2-flex** | 8.25 | ✅ 8.5/10 | 🟢 | Textures |
+| 4 | 🦚🎨 Imagen 4.0 | 7.5 | ⚠️ 6.5/10 | 🟡 | S1–S2 only |
+| 5 | 🔥⚡ Flux-2-max | 7.1 | ❌ 5/10 | 🟡 | S1 only |
+| 6 | 🐸🖼️ DALL-E 3 | ~5.5 | ❌ 4/10 | ❌ | Excluded |
+
+The split happens on S5 (environmental departure): models with 7+ overall can still break on the hardest slot, which is why Flux-2-max and Imagen 4.0 are capped at early slots even though their average is decent.
+
 ---
 
 ## 🚀 Usage
