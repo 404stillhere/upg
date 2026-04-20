@@ -3,6 +3,8 @@
 Что делает:
 - Копирует *.md из full_versions/, patches/, tools/, project_tools/ в vault/UPG/
 - Конвертирует project_tools/*.txt в .md при копировании
+- Копирует docs/ (ARCHITECTURE, USAGE, EVOLUTION, GLOSSARY) в vault/UPG/docs/
+- Копирует верхнеуровневые BENCHMARK.md, CHANGELOG.md, README.md, README.ru.md, LICENSE
 - Добавляет навигацию prev/next в full_versions и base-link в patches
 - Генерит UPG.canvas — визуальную историю версий
 - Обновляет Index.md с Mermaid-диаграммой эволюции
@@ -40,18 +42,20 @@ def is_mb(name: str) -> bool:
 
 
 def copy_tree():
-    for sub in ("full_versions", "patches", "tools", "project_tools"):
+    for sub in ("full_versions", "patches", "tools", "project_tools", "docs"):
         (DST / sub).mkdir(parents=True, exist_ok=True)
-    for sub in ("full_versions", "patches", "tools"):
+    for sub in ("full_versions", "patches", "tools", "docs"):
         for p in (SRC / sub).glob("*.md"):
             shutil.copy2(p, DST / sub / p.name)
     for p in (SRC / "project_tools").glob("*.md"):
         shutil.copy2(p, DST / "project_tools" / p.name)
     for p in (SRC / "project_tools").glob("*.txt"):
         shutil.copy2(p, DST / "project_tools" / (p.stem + ".md"))
-    readme = SRC / "README.md"
-    if readme.exists():
-        shutil.copy2(readme, DST / "README.md")
+    for top in ("README.md", "README.ru.md", "BENCHMARK.md", "CHANGELOG.md", "LICENSE"):
+        src_file = SRC / top
+        if src_file.exists():
+            dst_name = top if top.endswith(".md") else top + ".md"
+            shutil.copy2(src_file, DST / dst_name)
 
 
 def strip_old_nav(text: str) -> str:
