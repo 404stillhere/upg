@@ -12,7 +12,7 @@ A prompt-engineering system for text-to-image models. Takes a theme, returns a c
 
 ---
 
-## What is this?
+## 🎯 What is this?
 
 **UPG** (Universal Prompt Generator) is a large system prompt that you paste into ChatGPT, Claude, or any capable reasoning model. You give it a theme (a word, a phrase, a structured template). It returns 1, 3, or 5 production-ready prompts for Midjourney, Flux, Stable Diffusion, xAI Aurora, Gemini Imagen, or Firefly.
 
@@ -30,7 +30,7 @@ The current version is **v10** and occupies roughly 30 KB of compressed notation
 
 ---
 
-## Why this repo exists
+## 📖 Why this repo exists
 
 This is a **personal research archive**. The goal is not distribution — it is documentation. Every full version is preserved so the design decisions can be traced:
 
@@ -43,7 +43,7 @@ Read the code of a prompt system, not just its current frontend. That's the poin
 
 ---
 
-## Pipeline at a glance
+## ⚙️ Pipeline at a glance
 
 ```mermaid
 flowchart LR
@@ -61,7 +61,7 @@ flowchart LR
 
 ---
 
-## Repo layout
+## 📁 Repo layout
 
 ```
 upg/
@@ -78,7 +78,7 @@ upg/
 
 ---
 
-## Versions at a glance
+## 📜 Versions at a glance
 
 | Era | Versions | What changed |
 |---|---|---|
@@ -96,7 +96,7 @@ See [CHANGELOG.md](CHANGELOG.md) for the full per-version record and [docs/EVOLU
 
 ---
 
-## Companion tools
+## 🛠️ Companion tools
 
 UPG is the engine. These are the protocols that surround it.
 
@@ -114,7 +114,7 @@ All companion tools live in [`project_tools/`](project_tools/) and [`tools/`](to
 
 ---
 
-## Testing and benchmark
+## 🧪 Testing and benchmark
 
 UPG has been run through a validation campaign: **32 tests across 18 LLMs** (OpenAI, Anthropic, Google, Zhipu, Moonshot, Baidu, Alibaba, xAI, DeepSeek). Full report (in Russian, with emoji vendor markers): [BENCHMARK.md](BENCHMARK.md).
 
@@ -133,7 +133,7 @@ The v12.1 campaign audit surfaced two validation blind spots (L7 density countin
 
 ---
 
-## Usage
+## 🚀 Usage
 
 The full walkthrough is in [docs/USAGE.md](docs/USAGE.md). In short:
 
@@ -146,7 +146,7 @@ For deeper workflows — Checklist → UPG session handoff, Tournament ranking, 
 
 ---
 
-## Architecture
+## 🏛️ Architecture
 
 The 30-minute read for anyone who wants to understand the design is [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md). It covers phases, zones, seeds, modules, the ban registry, and why each validation layer exists.
 
@@ -154,13 +154,13 @@ For terminology (EIS, Drift, Ring Test, Carrying Image, Lens, Zone, Slot) see [d
 
 ---
 
-## Status
+## 📊 Status
 
 Active research. Numbering is author-defined (no semantic-versioning guarantee). Patches can introduce breaking changes to the phase structure. v10 is the current stable reference; earlier versions are kept for traceability and are not maintained.
 
 ---
 
-## License
+## 🔒 License
 
 **All Rights Reserved.** See [LICENSE](LICENSE) for the full text.
 
@@ -168,6 +168,6 @@ This is not open-source. You can read it. You cannot use it in your own projects
 
 ---
 
-## Author
+## ✍️ Author
 
 [**@404stillhere**](https://github.com/404stillhere) — prompt engineering, system design, architecture decisions.
