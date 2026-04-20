@@ -1,3 +1,21 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Obsidian (the vault lives outside this repo, but just in case)
+.obsidian/
+
+# Claude.ai export snapshots — not tracked in git, kept locally only
+UPG_archive.zip
+UPG_archive_full_history.zip
