@@ -10,6 +10,8 @@ A prompt-engineering system for text-to-image models. Takes a theme, returns a c
 
 > 🇷🇺 [Читать на русском](README.ru.md)
 
+**Quick links:** 🎯 [About](#-what-is-this) · 🚀 [Usage](#-usage) · 🏛️ [Architecture](docs/ARCHITECTURE.md) · 🧪 [Benchmark](BENCHMARK.md) · 📜 [CHANGELOG](CHANGELOG.md) · 📚 [Glossary](docs/GLOSSARY.md)
+
 ---
 
 ## 🎯 What is this?

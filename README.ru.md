@@ -10,6 +10,8 @@
 
 > 🇬🇧 [Read in English](README.md)
 
+**Быстрые ссылки:** 🎯 [О проекте](#-что-это) · 🚀 [Запуск](#-как-пользоваться) · 🏛️ [Архитектура](docs/ARCHITECTURE.md) · 🧪 [Benchmark](BENCHMARK.md) · 📜 [CHANGELOG](CHANGELOG.md) · 📚 [Glossary](docs/GLOSSARY.md)
+
 ---
 
 ## 🎯 Что это?
