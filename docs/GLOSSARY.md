@@ -4,6 +4,45 @@
 
 Алфавитный порядок. Термины, меняющие значение между версиями, помечены звёздочкой — у них есть секция `До / После`.
 
+<details>
+<summary><b>📑 Термины по алфавиту</b></summary>
+
+**A** · [ABSTRACT-HARD](#abstract-hard) · [ANCHOR](#anchor) · [ARC](#arc) · [Associative Artifacts](#associative-artifacts) · [AUTH_LAYER](#auth_layer) · [AUTO-GOAL](#auto-goal)
+
+**B** · [BAN REGISTRY](#ban-registry)
+
+**C** · [Carrying Image](#carrying-image) · [CAMERA_SYSTEM](#camera_system) · [Coherence Thread](#coherence-thread-) · [CONCISE_MODE](#concise_mode) · [Contrast Pairs](#contrast-pairs)
+
+**D** · [Density Scoring](#density-scoring) · [DEVICE_SIM](#device_sim) · [Drift](#drift)
+
+**E** · [EIS — Emotional Intensity Score](#eis--emotional-intensity-score) · [Entry Angle](#entry-angle)
+
+**F** · [FACTION_POV](#faction_pov) · [Frame Scale](#frame-scale)
+
+**G** · [GTR — Generator Trigger Registry](#gtr--generator-trigger-registry)
+
+**H** · [HARD CHECKS](#hard-checks-p0--p1a--p1b--p1m)
+
+**I** · [IDENTITY_LOCK](#identity_lock) · [INTENT_SIGNAL](#intent_signal)
+
+**L** · [Lens (Creative Lens)](#lens-creative-lens) · [LOCALE_DETAIL](#locale_detail)
+
+**M** · [Mandatory Language](#mandatory-language) · [MATERIAL_FIDELITY](#material_fidelity) · [MODE](#mode) · [Module (A/B/C/D/V)](#module-abcdv) · [MUST_INCLUDE / MUST_AVOID](#must_include--must_avoid)
+
+**P** · [Pattern 3C](#pattern-3c) · [Phase (1.x / 2.x / ... / 6.x)](#phase-1x--2x---6x) · [PRESERVE_LIST](#preserve_list) · [Propagation Lock](#propagation-lock)
+
+**R** · [REALISM_ANCHOR](#realism_anchor) · [REFERENCE_EXTRACTION](#reference_extraction) · [Ring Test](#ring-test)
+
+**S** · [S5 — Environmental Departure](#s5--environmental-departure) · [Safety Transform](#safety-transform) · [Seed](#seed) · [SLOT (S1–S5)](#slot-s1s5) · [STYLE_PROFILE](#style_profile)
+
+**T** · [THEME_WIDTH](#theme_width) · [THRESHOLD_ELEMENTS](#threshold_elements) · [Tier 1 / Tier 2 adjectives](#tier-1--tier-2-adjectives-) · [Track (SIMPLE / STANDARD / COMPLEX)](#track-simple--standard--complex)
+
+**V** · [VALIDATION STACK (L1–L9.2)](#validation-stack-l1l92) · [VCP — Visual Correspondence Protocol](#vcp--visual-correspondence-protocol)
+
+**Z** · [ZONE (A / B / C)](#zone-a--b--c)
+
+</details>
+
 ---
 
 ## ABSTRACT-HARD
