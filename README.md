@@ -8,6 +8,12 @@ A prompt-engineering system for text-to-image models. Takes a theme, returns a c
 ![VCP](https://img.shields.io/badge/VCP-v1.0-blue)
 ![Status](https://img.shields.io/badge/status-active_research-orange)
 
+![GitHub stars](https://img.shields.io/github/stars/404stillhere/upg?style=flat&logo=github&color=yellow)
+![Last commit](https://img.shields.io/github/last-commit/404stillhere/upg?style=flat&logo=git&color=brightgreen)
+![Repo size](https://img.shields.io/github/repo-size/404stillhere/upg?style=flat)
+![Top language](https://img.shields.io/github/languages/top/404stillhere/upg?style=flat&color=informational)
+![Commit activity](https://img.shields.io/github/commit-activity/m/404stillhere/upg?style=flat&color=blueviolet)
+
 > 🇷🇺 [Читать на русском](README.ru.md)
 
 **Quick links:** 🎯 [About](#-what-is-this) · 🚀 [Usage](#-usage) · 🏛️ [Architecture](docs/ARCHITECTURE.md) · 🧪 [Benchmark](BENCHMARK.md) · 📜 [CHANGELOG](CHANGELOG.md) · 📚 [Glossary](docs/GLOSSARY.md)
