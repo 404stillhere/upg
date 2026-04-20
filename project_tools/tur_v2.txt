@@ -1,0 +1,640 @@
+# TOURNAMENT SYSTEM v2.0
+
+Synced with UPG v9.19.0 / Checklist v1.8.0
+
+---
+
+# TIER 1: BATTLE ROYALE
+
+You have 6 series of 5 prompts each (30 prompts total) on the same theme.
+
+TASK: Evaluate ALL 30 prompts together and select the TOP 5 using weighted criteria.
+
+CONTEXT: ARTISTIC
+WEIGHTS: Clarity ×1.0 | Specificity ×1.5 | Originality ×1.5 | Technical ×1.0 | Arc Fit ×1.0 | Density ×1.0
+MAX SCORE: 70 per prompt
+
+---
+
+## PHASE 0: MODE & CONTEXT DETECTION
+
+Before scoring, identify the generation context:
+
+| Parameter | Value |
+|-----------|-------|
+| MODE | 1 / 2 / 3 |
+| ARC | FULL / SHALLOW / REMIX |
+| GOAL | artistic / editorial / personal / commercial / scientific |
+| PLATFORM | MJ / Flux / SD / Aurora / universal |
+| MODULES ACTIVE | A / B / C / D / none |
+| MODULE COMBINATIONS | A+B / A+D / B+D / A+B+D / none |
+| FRAME_SCALE | FULL SCENE / MIXED / CLOSE-UP |
+| REALISM_ANCHOR | ON / OFF |
+| MJ_LIMITS | default (v6) / custom |
+| CAMERA_SYSTEM | [body] + [lens] / N/A |
+
+**MODE 3 NOTE:** If MODE=3, use REMIX arc positions (LITERAL → SHIFTED → SURREAL → ABSURD → RESOLUTION) instead of standard arc. Adjust Phase 2 accordingly.
+
+**SHALLOW NOTE:** If SHALLOW ARC, positions are (HERO → TILT → CONTEXT → DETAIL → CONVERSION).
+
+---
+
+## PHASE 1: FULL RANKING TABLE
+
+| Rank | Run | Slot | Clarity /10 | Spec ×1.5 /15 | Orig ×1.5 /15 | Tech /10 | Arc /10 | Dens /10 | TOTAL /70 |
+|------|-----|------|-------------|---------------|---------------|----------|---------|----------|-----------|
+| 1 | | | | | | | | | |
+| 2 | | | | | | | | | |
+| 3 | | | | | | | | | |
+| ... | | | | | | | | | |
+| 30 | | | | | | | | | |
+
+**DENSITY SCORING (new column):**
+Count per slot: named materials + specific colors + measurements + texture descriptors + light behavior + spatial prepositions + condition indicators.
+
+Detail Counting Rule: each word/phrase counts in ONE category only.
+"oxidized copper" = 1 material OR 1 condition, not both.
+
+| Score | MODE 1/2 minimums | MODE 3 (2-3 elem) | MODE 3 (4-5 elem) | MODE 3 (6-7 elem) | MODE 3 (8-10 elem) |
+|-------|-------------------|---------------------|---------------------|---------------------|----------------------|
+| 10 | S1≥10 S2≥8 S3≥9 S4≥8 S5≥7 | S1≥8 S2≥6 S3≥7 S4≥6 S5≥5 | Standard | S1≥12 S2≥10 S3≥11 S4≥10 S5≥9 | S1≥14 S2≥12 S3≥13 S4≥12 S5≥11 |
+| 7-9 | Meets all minimums | Meets all | Meets all | Meets all | Meets all |
+| 4-6 | Misses 1-2 slots | Misses 1-2 | Misses 1-2 | Misses 1-2 | Misses 1-2 |
+| 1-3 | Misses 3+ slots | Misses 3+ | Misses 3+ | Misses 3+ | Misses 3+ |
+
+**MJ DENSITY (if PLATFORM=MJ):** S1≥5, S2≥4, S3≥5, S4≥4, S5≥4 (replaces standard minimums).
+
+---
+
+## PHASE 2: TOP 5 SELECTION WITH ARC CONSTRAINT
+
+From the ranking, select 5 prompts that:
+- Score highest overall
+- Can form a coherent arc (type depends on MODE/GOAL)
+
+### ARC POSITIONS BY TYPE:
+
+**FULL ARC (artistic/editorial/personal, MODE 1):**
+S1 ANCHOR → S2 TILT → S3 COLLISION (Seed1/Adjacent) → S4 DRIFT (Seed2/Oblique) → S5 RUPTURE (Seed3/Absence)
+
+**SHALLOW ARC (commercial/scientific):**
+S1 HERO → S2 TILT → S3 CONTEXT → S4 DETAIL → S5 CONVERSION
+
+**MODE 2 (narrative):**
+S1 INTACT → S2 USE → S3 WEAR → S4 REPAIR/REPURPOSE → S5 RUPTURE/TRACE
+(If commercial + MODE 2: S5 = CONVERSION, not RUPTURE)
+
+**MODE 3 REMIX:**
+S1 LITERAL → S2 SHIFTED → S3 SURREAL → S4 ABSURD → S5 RESOLUTION
+(Resolution type: COLLAPSE / ABSENCE / MATRYOSHKA / EXPLOSION / LOOP)
+
+**SELECTION LOGIC:**
+1. Start with #1 ranked prompt → assign to best-fit arc position
+2. Continue down ranking, checking arc compatibility
+3. If high-scorer breaks arc logic → skip to next candidate
+4. Ensure carrying image / element presence rules per arc type
+
+**CARRYING IMAGE / ELEMENT PRESENCE CHECK:**
+
+FULL ARC:
+- S1-S3: carrying image present and dominant
+- S4: oblique connection, carrying image may recede (Ring 3 pass required)
+- S5: carrying image ABSENT, only traces
+
+SHALLOW ARC:
+- S1-S5: product/subject visible in all slots
+- S2: product-line identical to S1
+- S5: sellable / conversion frame
+
+MODE 3 REMIX:
+- S1-S4: ALL declared elements identifiable
+- S5: per resolution type (COLLAPSE=hybrid, ABSENCE=traces, etc.)
+
+**COMPOUND THEME CHECK:**
+If theme is compound (X in Y / X with Y / X wearing Y):
+- S1-S3: Both components must be present
+- S4: May show oblique reference to ensemble
+- S5: NEITHER component visible — only traces of BOTH
+
+**S5 COMPOSITE 4-TEST (FULL ARC, compound themes):**
+1. Silhouette Test: no recognizable shapes of either component
+2. Evidence Shift: reference material transformation (melted→residue, burned→ash)
+3. Physical Presence: discrete elements absent, only environmental marks
+4. Interior Retreat: enclosed/blocked windows preferred
+
+| Arc Position | Selected | Run | Original Slot | Score /70 | Why selected |
+|--------------|----------|-----|---------------|-----------|--------------|
+| S1 | | | | | |
+| S2 | | | | | |
+| S3 | | | | | |
+| S4 | | | | | |
+| S5 | | | | | |
+
+**Total combined score: [X]/350**
+
+---
+
+## PHASE 3: RUNNER-UP POOL
+
+Next 5 highest-scoring prompts not selected (for Tier 2 replacements):
+
+| Backup | Run | Slot | Score | Could replace |
+|--------|-----|------|-------|---------------|
+| B1 | | | | S1, S2, S3 |
+| B2 | | | | S1, S3 |
+| B3 | | | | S4 |
+| B4 | | | | S2, S3 |
+| B5 | | | | S5 |
+
+---
+
+## PHASE 4: STATS
+
+| Run | Prompts in Top 5 | Prompts in Top 10 | Avg Score | Density Avg |
+|-----|------------------|-------------------|-----------|-------------|
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+| 4 | | | | |
+| 5 | | | | |
+| 6 | | | | |
+
+**Dominant Run:** [X] with [N] prompts in Top 5
+**Most Versatile Run:** [X] — prompts fit multiple arc positions
+**Densest Run:** [X] — highest average density score
+
+---
+
+**DO NOT proceed to Tier 2. Stop here.**
+
+---
+
+---
+
+# TIER 2: ARC COHERENCE CHECK (Battle Royale версия)
+
+**Tier 1 winners:**
+- S1: Run [X], original slot [Y], score [Z]
+- S2: Run [X], original slot [Y], score [Z]
+- S3: Run [X], original slot [Y], score [Z]
+- S4: Run [X], original slot [Y], score [Z]
+- S5: Run [X], original slot [Y], score [Z]
+
+**Context from Phase 0:**
+- MODE: [X] | ARC: [X] | MODULES: [X] | FRAME_SCALE: [X]
+- REALISM_ANCHOR: [ON/OFF] | CAMERA_SYSTEM: [X/N/A]
+
+---
+
+## PHASE 1: STRUCTURAL FIT CHECK
+
+Поскольку промпты могли прийти из ЛЮБЫХ оригинальных слотов, сначала проверяем — подходят ли они на назначенные позиции.
+
+| Position | Source | Original Role | Assigned Role | Fit? | Issue |
+|----------|--------|---------------|---------------|------|-------|
+| S1 | Run X, S[Y] | [original] | [assigned] | ✅/❌ | |
+| S2 | Run X, S[Y] | | | ✅/❌ | |
+| S3 | Run X, S[Y] | | | ✅/❌ | |
+| S4 | Run X, S[Y] | | | ✅/❌ | |
+| S5 | Run X, S[Y] | | | ✅/❌ | |
+
+**FIT CRITERIA BY ARC TYPE:**
+
+FULL ARC:
+- ANCHOR: Literal depiction, establishes theme clearly
+- TILT: Same subject, different angle/light/scale (≥2 differences from S1)
+- COLLISION: Adjacent metaphor, carrying image still visible
+- DRIFT: Oblique connection, Ring 3 pass (different environment), decode 10-15s
+- RUPTURE: Trace/absence only, no literal carrying image
+
+SHALLOW ARC:
+- HERO: Product/subject front-forward, 3/4 angle
+- TILT: Same product, ≥3 of 5 categories different from S1 (setting/light/framing/background/interaction)
+- CONTEXT: Product in use/lifestyle
+- DETAIL: Macro/texture focus
+- CONVERSION: Sellable frame / CTA-ready
+
+MODE 3 REMIX:
+- LITERAL: 0 impossibilities, photographable, all elements present, ≥2 interactions
+- SHIFTED: 1 strangeness, others natural
+- SURREAL: 2-3 role swaps, 1 spatial violation
+- ABSURD: 3-5 physics breaks (cap 5, each in one sentence)
+- RESOLUTION: Per selected type (COLLAPSE/ABSENCE/MATRYOSHKA/EXPLOSION/LOOP)
+
+If ❌ → flag for replacement from runner-up pool
+
+---
+
+## PHASE 2: ARC COHERENCE CHECKS
+
+| # | Check | ✅/❌ | Details |
+|---|-------|------|---------|
+| 1 | **Carrying image chain (FULL):** S1→S2→S3 show same core subject? | | [what links them] |
+| 1m | **Element presence (MODE 3):** S1-S4 all declared elements identifiable? | | [missing elements per slot] |
+| 2 | **S4 oblique/absurd:** Different setting (FULL) or physics breaks ≤5 (MODE 3)? | | [connection type / violation count] |
+| 3 | **S5 true departure:** Per arc type, S5 satisfies requirements? | | [what remains / resolution type] |
+| 4 | **No arc gaps:** Progression feels continuous, not random? | | [weakest transition] |
+| 5 | **No redundancy:** Each slot adds something new? | | [any overlaps] |
+| 5a | **Compound S5 departure:** If compound theme, BOTH components absent? 4-test pass? | | [N/A if simple / test results] |
+| 5b | **MODE 3 gradient:** Strangeness escalates per declared gradient type? | | [N/A if MODE 1/2 / gradient: SMOOTH/SHARP/etc] |
+| 5c | **MODE 3 coherence thread:** Visual connection maintained across all 5? | | [N/A / thread type + evidence] |
+| 5d | **MODE 3 primary rotation:** Primary element not stuck in same role ≥3 slots? | | [N/A / role distribution] |
+
+---
+
+## PHASE 3: TECHNICAL COHERENCE CHECKS
+
+| # | Check | ✅/❌ | Details |
+|---|-------|------|---------|
+| 6 | **Adjacent uniqueness:** Each pair differs in ≥3 of: setting, light, scale, lens, mood? | | [pairs: 1-2, 2-3, 3-4, 4-5] |
+| 6a | **SHALLOW S1→S2 uniqueness:** ≥3 of 5 categories differ (setting/light/framing/background/interaction)? | | [N/A if FULL / categories varied] |
+| 7 | **Contrast diversity:** Max 2 slots per level (H/M/L)? | | [distribution] |
+| 8 | **Lens diversity:** ≥4 different approaches across 5 slots, no lens >2×? | | [list] |
+| 8a | **Lens-Aspect compatibility:** CINE only with 2.39:1/2.00:1/16:9? | | [any conflicts] |
+| 8b | **Frame Scale consistency:** All slots match declared FRAME_SCALE? | | [FULL SCENE: all 24-35mm? / MIXED: documented?] |
+| 9 | **No banned phrases:** Full BAN REGISTRY scan (see checklist below) | | [scan result] |
+| 10 | **Rendering tail clean:** No "rendered with X" as final sentence? Rendering in 2nd/3rd-to-last only? | | [scan result] |
+| 10a | **Final sentence physical:** Every slot ends on visible physical detail? No purpose/effect/abstract? | | [scan result] |
+| 10b | **Final variation:** "ending on [X]" pattern used ≤2× across set? | | [count and patterns] |
+| 11 | **Density minimums met:** All slots meet density thresholds per MODE/element count? | | [per-slot counts] |
+| 12 | **Realism anchor (if ON):** ≥2 grounding phrases per slot with supernatural content? | | [N/A if OFF / phrases per slot] |
+| 13 | **Mood anti-pattern:** No forbidden mood readings? Physical prevention present? | | [N/A if no MOOD_ANTI_PATTERN / scan result] |
+| 14 | **Camera system consistency (if declared):** Body/lens characteristics present in PHOTO/CINE slots? | | [N/A / consistency check] |
+| 15 | **Threshold elements (if declared):** Physical technique present, no conditional language, correct scale? | | [N/A / compliance per slot] |
+| 16 | **Spatial meaning (if declared):** Zone assignments honored? | | [N/A / zone compliance] |
+| 17 | **Sensory markers:** Visible markers only? No named sensations? No "no sound" type violations? | | [scan result] |
+| 18 | **Narrated Absence Ban (S5):** No "absent/invisible" — only describes what IS there? | | [scan result] |
+
+**CHECK 9 — BANNED PHRASE CHECKLIST (synced with UPG v9.19 BAN REGISTRY):**
+
+ZERO TOLERANCE (any form = fail):
+- □ suggests / implying / implies
+- □ reads as / reading as
+- □ as if / as though
+- □ making X [adjective]
+- □ turning X into
+- □ begins to / starting to / about to
+- □ viewer / observer
+- □ evoking / establishing / conveys
+- □ juxtaposition / interplay
+- □ echoes / mirrors / reflects (metaphorical use)
+- □ commands / dominates / anchors (metaphorical use)
+- □ proudly / boldly / gracefully
+- □ while still [verb-ing]
+- □ "tension" WITHOUT physical qualifier (OK: "fabric tension lines", "fold tension")
+- □ from[slot] / hero shot / S[n] (meta-references)
+
+ABSTRACT NOUNS (delete if found):
+- □ stillness / silence / energy / absence / void
+- □ memory / time / presence / atmosphere
+- □ essence / spirit / soul / beauty / power
+- □ grace / elegance / serenity / tranquility
+- □ harmony / balance / chaos / mystery
+- □ transformation (replace with visible state change)
+
+TIER 1 ADJECTIVES (must have physical qualifier or fail):
+- □ soft (OK: "soft clay Shore A 20", FAIL: "soft light")
+- □ fine (OK: "fine mesh 400-count", FAIL: "fine detail")
+- □ gentle / subtle / elegant / delicate
+- □ clean / fresh / smooth / simple
+- □ CONJUGATIONS: softens / softened / softening / softer (all banned without qualifier)
+
+TIER 2 ADJECTIVES (always replace materially):
+- □ nice / beautiful / lovely / pure / clear
+- □ calm / quiet / refined / pretty / pleasant
+
+MODE 3 EXTENSIONS (if MODE=3):
+- □ represents / symbolizes (→ physical hybrid description)
+- □ fusion / combination / mix / blend of (→ direct result)
+- □ impossible / unreal / surreal / dreamlike as adjective (→ specific quality)
+  (surreal OK in rendering refs: "Dalí-precision", "surrealist clarity")
+- □ transforms / is becoming / merging / in process of (→ frozen state)
+- □ **becomes** (→ "now [state]" or "in [state]")
+
+COMMERCIAL REGISTER BANS (if GOAL=commercial):
+- □ sublime / echo / memory / silence / absence
+- □ breath / dissolution / rupture / void
+
+BANNED FINAL PATTERNS:
+- □ Final sentence contains: turning / creating / demonstrating / achieving / establishing / serving as
+- □ Final sentence contains: purpose/effect clause, abstract state, rendering instructions
+
+LOCALIZED BANS (RU):
+- □ будто / словно / как будто / как если бы (→ visible state)
+
+**Scan result:** [CLEAN / found: "___" in S__]
+
+---
+
+## PHASE 3A: MODULE-SPECIFIC CHECKS (if modules active)
+
+**Skip this section if no modules active.**
+
+| # | Check | ✅/❌ | Details |
+|---|-------|------|---------|
+| M1 | **Module A (if active):** Format present? ≥2 text layers? Copy matches theme language? | | |
+| M2 | **Module B (if active):** Form factor described? Closure visible S1-S4? Label elements? | | |
+| M3 | **Module C (if active):** Redirect via light/silhouette? No explicit content? | | |
+| M4 | **Module D (if active):** Stage progression: intact→use→wear→repair→trace? | | |
+| M5 | **Module combinations:** Priority respected (A→B→D→C)? | | |
+
+**MODULE COMBINATION S5 CHECKS:**
+- A+D default (CONCEPTUAL TRACE): Space where artwork WAS — adhesive residue, mounting holes. Artwork NOT visible.
+- A+D physical (user specified): Destroyed artwork visible but damaged.
+- B+D: Empty packaging with use evidence.
+- A+B+D: Follows B+D logic (empty packaging).
+
+---
+
+## PHASE 4: REPLACEMENT LOGIC
+
+If any ❌ in Phases 1-3:
+
+| Failed Check | Problem Slot | Current Source | Replacement | New Source | Re-check |
+|--------------|--------------|----------------|-------------|------------|----------|
+| | | Run X, S[Y] | → | Run X, S[Y] from B-pool | ✅/❌ |
+
+**Replacement Priority:**
+1. Highest-scoring runner-up that fixes the issue
+2. Must not break other passing checks
+3. If B1-B5 exhausted → flag for manual review
+
+**COMPOUND S5 REPLACEMENT:**
+If check 5a fails (compound theme, component visible in S5):
+- S5 must pass all 4 composite tests (silhouette, evidence shift, physical presence, interior retreat)
+- Traces may include: evidence of both components, context objects, environmental marks
+- If no runner-up qualifies → S5 requires rewrite, not just replacement
+
+**MODE 3 S5 REPLACEMENT:**
+If check 5b/5c/5d fails:
+- Match resolution type (COLLAPSE/ABSENCE/MATRYOSHKA/EXPLOSION/LOOP)
+- All elements must contribute to S5 per type rules
+- Coherence thread must persist
+
+---
+
+## FINAL LINEUP
+
+| Slot | Source | Original Slot | Score | Status |
+|------|--------|---------------|-------|--------|
+| S1 | Run [X] | S[Y] | /70 | ✅ original / 🔄 replaced |
+| S2 | Run [X] | S[Y] | /70 | ✅ original / 🔄 replaced |
+| S3 | Run [X] | S[Y] | /70 | ✅ original / 🔄 replaced |
+| S4 | Run [X] | S[Y] | /70 | ✅ original / 🔄 replaced |
+| S5 | Run [X] | S[Y] | /70 | ✅ original / 🔄 replaced |
+
+**Combined score: [X]/350**
+**Replacements made: [N]**
+**Rewrites required: [N]**
+
+---
+
+**DO NOT proceed to Tier 3. Stop here.**
+
+---
+
+---
+
+# TIER 3: FINAL POLISH (Battle Royale версия)
+
+**Final 5 prompts from Tier 2:**
+[use lineup from Tier 2]
+
+---
+
+## A. CROSS-SLOT CONSISTENCY CHECK
+
+В Battle Royale промпты из разных ранов могут иметь разный стиль/тон.
+
+| Check | ✅/❌ | Fix needed |
+|-------|------|------------|
+| **Tonal consistency:** All 5 feel like same series? | | |
+| **Palette compatibility:** Colors don't clash across slots? | | |
+| **Technical voice:** Similar prompt structure/density? | | |
+| **Language register:** No jarring shifts (poetic↔clinical)? | | |
+| **Realism anchor consistency:** All slots same ON/OFF state? | | |
+| **Camera system consistency:** Body/lens chars uniform across PHOTO/CINE slots? | | |
+| **Coherence thread (MODE 3):** Visual connection maintained? | | |
+| **Mood anti-pattern:** No forbidden readings across series? | | |
+
+**If ❌:** Note which slot breaks consistency, suggest specific edits.
+
+---
+
+## B. COLOR ACCESSIBILITY
+
+| Slot | Deuteranopia safe? | Protanopia safe? | Grayscale readable? | Fix needed? |
+|------|--------------------|------------------|---------------------|-------------|
+| S1 | | | | |
+| S2 | | | | |
+| S3 | | | | |
+| S4 | | | | |
+| S5 | | | | |
+
+If ❌: suggest saturation +20% or hue shift 15° for problem colors.
+
+---
+
+## C. GENERATOR COMPATIBILITY
+
+| Slot | Best generator | Why | Modifications needed |
+|------|----------------|-----|----------------------|
+| S1 | | | |
+| S2 | | | |
+| S3 | | | |
+| S4 | | | |
+| S5 | | | |
+
+**Generators:** Flux 1.1 Pro | Midjourney v6.1 | SDXL | Aurora
+
+**MJ-specific check (if MJ target):**
+- □ S1-S4 ≤ max_sent (default 3) sentences?
+- □ S5 ≤ max_sent+1 (default 4) sentences?
+- □ Each slot ≤ max_elem (default 5) elements (Subj/Mat/Light/Set/Sec)?
+- □ MJ_LIMITS version correct?
+
+**MODE 3 platform compatibility:**
+- MJ: Excellent (use --style raw for S4-S5)
+- Flux/Aurora: Good
+- DALL-E 3: Poor (warn — literal interpretation of surreal content)
+- SD: Variable
+
+**Series recommendation:** [generator] — best overall fit because [reason]
+
+---
+
+## D. RENDERING COMPLIANCE
+
+**Skip this section if ALL 5 slots are PHOTO medium.**
+
+| Slot | Medium | Rendering phrases? | TIER 1 clean? | Final sentence clean? | Rendering position OK? | Pass? |
+|------|--------|-------------------|---------------|----------------------|----------------------|-------|
+| S1 | | | | | | |
+| S2 | | | | | | |
+| S3 | | | | | | |
+| S4 | | | | | | |
+| S5 | | | | | | |
+
+**Requirements:**
+- ≥3 slots with rendering vocabulary (if non-photo medium in series)
+- Rendering placement: 2nd or 3rd-to-last sentence (NOT final — Rendering Tail Ban)
+- Final sentence: physical detail only, no "rendered with X"
+
+**TIER 1 IN RENDERING CHECK:**
+Rendering vocabulary must NOT contain banned adjectives.
+
+| Banned in rendering | Replace with |
+|--------------------|--------------|
+| soft brushwork | loose brushwork / gestural brushwork |
+| soft transitions | gradual transitions / blurred transitions |
+| soft edges | feathered edges / diffused edges |
+| delicate strokes | thin strokes / hairline strokes |
+| delicate linework | narrow linework / precise linework |
+| gentle gradients | gradual gradients / low-angle gradients |
+| fine detail | granular detail / narrow detail |
+| subtle texture | understated texture / hint-of texture |
+| elegant composition | balanced composition / proportioned layout |
+
+If banned term found → rewrite rendering phrase before final output.
+
+---
+
+## E. NEW FEATURES COMPLIANCE
+
+**v9.19-specific checks across final 5:**
+
+| Check | ✅/❌ | Fix needed |
+|-------|------|------------|
+| **Realism Anchor phrases (if ON):** ≥2 per slot with supernatural? | | |
+| **Threshold elements (if declared):** Physical technique + desc + level present? No conditional? Scale correct (GHOST/HINT/PARTIAL/OBSCURED)? | | |
+| **Spatial meaning map (if declared):** Zone assignments honored in prompts? | | |
+| **Camera system (if declared):** Body characteristics + lens characteristics appended to PHOTO/CINE slots? Unknown camera fallback used? | | |
+| **Mood anti-pattern compliance:** Physical prevention markers present? No forbidden mood readings? | | |
+| **Reference extraction:** Technique (not name) used? | | |
+| **Entry angles (S1, S2 only):** Correct type? No angle language in S3-S5? | | |
+| **Sensory exception:** Visible markers only? No named sensations? | | |
+
+---
+
+## F. FINAL HARMONIZATION
+
+Edits applied to unify the series:
+
+| Slot | Edit type | Before | After |
+|------|-----------|--------|-------|
+| | | | |
+
+**Edit types:** TONE / PALETTE / DENSITY / PHRASING / TECHNICAL / RENDERING / BAN FIX / REALISM / THRESHOLD / MOOD / CAMERA / SPATIAL / SENSORY / NONE
+
+---
+
+## 🏆 FINAL OUTPUT
+
+**S1 ([ARC POSITION NAME])**
+```
+[full prompt text — with all fixes applied]
+```
+Source: Run [X], original S[Y] | Generator: [recommended] | Score: [X/70]
+Density: [count] details | Realism anchors: [count/N/A]
+
+---
+
+**S2 ([ARC POSITION NAME])**
+```
+[full prompt text]
+```
+Source: Run [X], original S[Y] | Generator: [recommended] | Score: [X/70]
+Density: [count] details | Realism anchors: [count/N/A]
+
+---
+
+**S3 ([ARC POSITION NAME])**
+```
+[full prompt text]
+```
+Source: Run [X], original S[Y] | Generator: [recommended] | Score: [X/70]
+Density: [count] details | Realism anchors: [count/N/A]
+
+---
+
+**S4 ([ARC POSITION NAME])**
+```
+[full prompt text]
+```
+Source: Run [X], original S[Y] | Generator: [recommended] | Score: [X/70]
+Density: [count] details | Realism anchors: [count/N/A]
+
+---
+
+**S5 ([ARC POSITION NAME])**
+```
+[full prompt text]
+```
+Source: Run [X], original S[Y] | Generator: [recommended] | Score: [X/70]
+Density: [count] details | Realism anchors: [count/N/A]
+
+---
+
+## TOURNAMENT STATS
+
+| Run | Prompts in Final 5 | Original Slots Used |
+|-----|--------------------|---------------------|
+| 1 | | |
+| 2 | | |
+| 3 | | |
+| 4 | | |
+| 5 | | |
+| 6 | | |
+
+**Winning combination:** [describe pattern]
+
+**Replacements in Tier 2:** [N]
+**Rewrites in Tier 2:** [N]
+**Edits in Tier 3:** [N]
+**Final combined score:** [X]/350
+
+**SESSION_HISTORY output (for RERUN tracking):**
+```
+SESSION_HISTORY: {
+  S1_ANCHORS: "[lens used in winning S1]"
+  SEED2_CATEGORIES: "[category of winning S4]"
+}
+```
+
+---
+
+## QUALITY VERIFICATION
+
+Before declaring tournament complete, verify:
+
+| Final Check | ✅/❌ |
+|-------------|------|
+| All 5 prompts free of ZERO TOLERANCE phrases? | |
+| All 5 prompts free of ABSTRACT NOUNS? | |
+| All TIER 1 adjectives qualified or removed? | |
+| All TIER 1 conjugations caught (softens/softened/softening/softer)? | |
+| MODE 3 bans enforced (incl. "becomes")? (if MODE 3) | |
+| Compound S5 shows neither component + passes 4-test? (if applicable) | |
+| Rendering phrases in 2nd/3rd-to-last position, not final? (if non-photo) | |
+| Rendering vocabulary free of TIER 1? (if non-photo) | |
+| All final sentences end on physical detail? | |
+| No "ending on [X]" used >2 times across set? | |
+| Density minimums met for all 5 slots? | |
+| Realism anchors present where required? | |
+| Sensory markers = visible only, no named sensations? | |
+| S5 narrated absence ban: no "absent/invisible", only what IS there? | |
+| Camera system consistent across PHOTO/CINE slots? (if declared) | |
+| Threshold elements non-conditional with correct scale? (if declared) | |
+| Mood anti-pattern physical prevention present? (if declared) | |
+| S4 physics violations ≤5? (MODE 3 only) | |
+| Frame Scale consistency verified? | |
+| MJ sentence/element limits respected? (if MJ platform) | |
+
+If any ❌ → fix before declaring complete.
+
+---
+
+**TOURNAMENT COMPLETE.**
+
+---
+

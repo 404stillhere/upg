@@ -1,0 +1,408 @@
+# META-AUDIT ANALYSIS PROTOCOL v1.2
+
+Synced with UPG v9.19.0 / Checklist v1.8.0
+
+---
+
+## PREAMBLE: Audit Rules
+
+> **Audit goal** — not to demonstrate self-criticism, but to establish ACTUAL deficits in analysis and determine what needs improvement.
+
+**Three prohibitions:**
+1. **No performative self-criticism.** "I acknowledge my analysis was superficial" without pointing to a SPECIFIC fragment and explaining WHAT EXACTLY is superficial about it — does not count.
+2. **No self-justification.** Formulations like "this was done intentionally because..." are allowed ONLY with proof that the alternative is worse.
+3. **No error inflation.** Do not attribute problems that don't exist for the sake of appearing rigorous. Each recorded error must be verifiable against the analysis text.
+
+**Verification method:** for each point — first QUOTE from your analysis, then VERDICT (matches / does not match / partial), then JUSTIFICATION of verdict.
+
+---
+
+## SCOPE ADAPTATION
+
+This meta-audit protocol is VERSION-AGNOSTIC. It checks audit QUALITY, not audit COVERAGE of specific prompt mechanisms.
+
+**Before running this protocol:**
+
+1. Identify which STAGES the target audit contains
+2. Map them to Blocks 1-5 below:
+
+| Block | Function | Maps to Stage(s) |
+|-------|----------|------------------|
+| Block 1: Potential Assessment | Evaluate prompt strengths/weaknesses | [___] |
+| Block 2: Problems & Errors | Identify specific issues | [___] |
+| Block 3: Specific Fixes | Provide ready solutions | [___] |
+| Block 4: Input Format Guidance | Show optimal theme/goal formulation | [___] |
+| Block 5: Cross-cutting Checks | Verify consistency & coverage | [___] |
+
+3. List additional stages not covered by Blocks 1-5: [___]
+4. For additional stages — apply Block 2 logic (problem identification quality)
+
+**Example mapping for UPG v9.19 Audit Protocol v1.1:**
+- Block 1 → Stage 1 (Potential Assessment)
+- Block 2 → Stage 2 (Output Data Audit) + Stage 3 (Problem Map)
+- Block 3 → Stage 5 (Specific Fixes)
+- Block 4 → Stage 7 (Optimal Input Format)
+- Block 5 → Stage 4 (Problem Relationships) + Stage 6 (Parameter Assessment) + Stage 8-9 (Implementation + Verification)
+- Additional: Stage 10 (Summary)
+
+---
+
+## 1. Block 1 Check: Potential Assessment
+
+### 1.1. Assessment Specificity
+- Is a NUMERICAL or SCALE rating given (e.g., 7/10, "above average among prompts of this class")?
+- Or are unfalsifiable formulations used ("good enough", "has potential")?
+- **Test:** Can someone UNAMBIGUOUSLY determine from your assessment whether to use the prompt as-is or it requires rework?
+
+### 1.2. Strengths
+- Is each strength backed by a QUOTE from the prompt?
+- Is the MECHANISM explained: why exactly does this formulation/structure improve generation quality?
+- **Distinctiveness test:** Can your strength claims be applied to a DIFFERENT prompt without changes? If yes — this is a template, not analysis.
+
+### 1.3. Weaknesses
+- For each weakness: is a SPECIFIC fragment cited + DEGRADATION MECHANISM explained (what exactly will go wrong during generation)?
+- **Test:** Did you describe the problem so that another person can reproduce it and see it in the prompt without additional explanation?
+
+### 1.4. Real vs. Illusory Work Separation
+- Did you identify elements that APPEAR functional but don't affect results (decorative structure, redundant subheadings, instructions the model will ignore)?
+- If no such elements exist — did you justify WHY each prompt element actually works?
+- **Compression awareness:** For compressed prompts (like UPG v9.19), did you distinguish between "unclear due to bad writing" and "compressed but decodable by executor model"?
+
+### 1.5. Analysis vs. Retelling
+- **Red test:** Remove from your block all sentences that DESCRIBE prompt content but don't EVALUATE it. What remains? If less than 60% of text — this is retelling, not analysis.
+
+---
+
+## 2. Block 2 Check: Problems & Errors
+
+### 2.1. Triple Check for EACH Named Problem
+
+**A. Specificity (Where?)**
+- Is an EXACT quote or fragment reference provided?
+- Or are vague pointers used ("some instructions", "in several places", "occasionally")?
+
+**B. Mechanism (Why is this a problem?)**
+- Is the CHAIN described: [prompt fragment] → [how model interprets it] → [what defect this causes in output]?
+- Or is the problem simply NAMED ("unclear formulation", "possible ambiguity") without explaining consequences?
+
+**C. Evidentiary basis (Is this definitely a problem?)**
+- Did you verify this is a REAL problem, not hypothetical? Is there reason to believe the model will actually stumble here?
+- Are you presenting your own formulation preference as an objective defect?
+
+**D. Classification accuracy (NEW v1.2)**
+- Is each problem correctly classified (PROMPT DEFECT / MODEL LIMITATION / ARCHITECTURAL LIMITATION / ENHANCEMENT SIDE-EFFECT / COMPRESSION ARTIFACT / MIXED)?
+- Are compression artifacts incorrectly classified as prompt defects?
+- Are model limitations incorrectly classified as prompt defects?
+
+### 2.2. Coverage Completeness (Problem Type Checklist)
+
+Mark which types you CHECKED (even if no problems found) and which you SKIPPED:
+
+| Problem Type | Checked? | Problems Found? | If Skipped — Why? |
+|--------------|----------|-----------------|-------------------|
+| Unclear / ambiguous instructions | | | |
+| Internal contradictions between prompt blocks | | | |
+| Redundancy (duplication, bloat without benefit) | | | |
+| Missing context / omitted constraints | | | |
+| Suboptimal block order / broken structure logic | | | |
+| Conflict between instruction detail and model freedom | | | |
+| Missing quality criteria (how does model determine "good" result?) | | | |
+| Prompt complexity vs. model capability mismatch (context overload, mutually exclusive requirements) | | | |
+| Unaccounted edge cases (boundary scenarios where prompt breaks) | | | |
+| Stylistic noise (filler words, non-functional emotional amplifiers) | | | |
+| **Semantic fidelity (theme → output match)** | | | |
+| **Planning → Output consistency** | | | |
+| **Ban enforcement effectiveness** | | | |
+| **Density compliance** | | | |
+| **Distribution/Rotation rule compliance** | | | |
+| **Binding integrity (seed→slot, lens→aspect, etc.)** | | | |
+| **Compatibility conflicts (mode×module, lens×magic, etc.)** | | | |
+| **New features integration (REALISM, THRESHOLD, MOOD, CAMERA, SPATIAL)** | | | |
+| **MODE 3 specific (gradient, coherence, element presence, physics cap)** | | | |
+
+### 2.2.1 Mechanism Coverage Check (version-specific)
+
+- Did the audit check ALL mechanisms declared in the analyzed prompt?
+- List mechanisms that exist in prompt but were NOT verified in audit:
+
+| Mechanism from prompt | Type | Checked in audit? | If not — why? |
+|-----------------------|------|-------------------|---------------|
+| [___] | [___] | [yes/no] | [___] |
+| [___] | [___] | [yes/no] | [___] |
+| [___] | [___] | [yes/no] | [___] |
+
+**Coverage calculation:**
+- Total mechanisms in prompt: [___]
+- Mechanisms verified in audit: [___]
+- Coverage: `[verified] / [total] × 100% = ____%`
+
+**Threshold:** <80% coverage = significant gap, flag for remediation.
+
+**Coverage by mechanism type (NEW v1.2):**
+
+| Mechanism type | Total | Verified | Coverage |
+|----------------|-------|----------|----------|
+| Constraints | | | |
+| Validations | | | |
+| Bans | | | |
+| Distributions | | | |
+| Rotations | | | |
+| Bindings | | | |
+| Density rules | | | |
+| Compatibility checks | | | |
+| Other | | | |
+
+### 2.3. Prioritization
+- Are problems ranked by DEGREE OF IMPACT on output quality?
+- Is explicit priority marking used (critical / important / desirable) or equivalent?
+- Or are problems dumped in a linear list without hierarchy?
+
+---
+
+## 3. Block 3 Check: Specific Fixes
+
+### 3.1. Format of Each Fix
+
+For EACH suggestion, verify presence of ALL components:
+
+| Component | Present? |
+|-----------|----------|
+| **BEFORE:** exact quote from prompt | |
+| **PROBLEM:** which error from Block 2 this relates to | |
+| **AFTER:** ready formulation that can be inserted without rework | |
+| **WHY BETTER:** explanation of improvement mechanism | |
+| **CLASSIFICATION:** is this fixing a PROMPT DEFECT or something else? | |
+
+- If instead of ready formulation an ADVICE is given ("should clarify", "recommended to specify") — this is not a fix, it's a wish. Record as defect.
+
+### 3.2. Prioritization
+- Are fixes separated into levels: **critical** (prompt works incorrectly without them) → **important** (noticeably improve quality) → **desirable** (polish)?
+- Is it clear WHERE TO START implementation?
+
+### 3.3. Internal Consistency
+- Do proposed fixes CONTRADICT each other?
+- Do fixes break what ALREADY WORKED WELL in the prompt (confirmed in Block 1)?
+- Is it verified that each fix solves a SPECIFIC problem from Block 2, not introducing a new one?
+
+### 3.4. Implementability Test
+- Can the prompt author take your "AFTER" formulations and substitute them without additional interpretation?
+- If a fix requires author's independent rework — this is NOT a ready fix.
+
+### 3.5. Compression Awareness (NEW v1.2)
+- Do fixes respect the prompt's compression level? (Don't expand what was deliberately compressed)
+- Do fixes maintain the prompt's abbreviation conventions?
+- If expanding: is the expansion justified by demonstrable meaning loss?
+
+---
+
+## 4. Block 4 Check: Input Format Guidance
+
+### 4.1. Quantity and Diversity of Examples
+- Are EXACTLY 2-5 examples provided?
+- Do examples cover DIFFERENT task types / genres / usage scenarios?
+- **Mode coverage:** Do examples include inputs for different modes (MODE 1/2/3), arc types (FULL/SHALLOW), and structured theme input?
+- **Test:** If you remove genre labels — can examples be confused with each other? If yes — they're insufficiently diverse.
+
+### 4.2. Justification for Each Example
+- For each example: is it explained WHY EXACTLY this input format works better in context of THIS prompt?
+- Is there connection to prompt specifics, or is this universal advice applicable to anything?
+
+### 4.3. Contrastive Demonstration
+- Is contrast shown: "WEAK formulation → STRONG formulation" with explanation of expected output difference?
+- Is it clear from the contrast WHAT EXACTLY makes a formulation strong?
+
+### 4.4. Practical Grounding
+- Are examples built on SPECIFIC features of the analyzed prompt (its structure, constraints, target output)?
+- Or are these template examples that could be given for any prompt?
+
+---
+
+## 5. Block 5 Check: Cross-cutting Consistency
+
+> This block verifies that the audit is a coherent system, not a set of independent sections.
+
+### 5.1. Traceability: Block 2 → Block 3
+- For EACH problem from Block 2: is a SPECIFIC solution proposed in Block 3?
+- Are there fixes in Block 3 NOT LINKED to any problem from Block 2? (Where did they come from?)
+
+### 5.2. Consistency: Block 1 ↔ Block 2
+- Does potential assessment (Block 1) contradict the problem list (Block 2)? (Example: "prompt is strong, 8/10" + list of 12 critical problems.)
+- Are strengths (Block 1) considered when formulating fixes (Block 3) — i.e., are they not destroyed?
+
+### 5.3. Consistency: Block 4 ↔ Blocks 1-3
+- Do input format examples (Block 4) account for identified limitations (Block 2) and proposed fixes (Block 3)?
+
+### 5.4. Coverage Completeness
+- Did the audit verify ALL stages/mechanisms it claims to cover?
+- Are there prompt features that audit silently skipped?
+- **Formula:** `[verified mechanisms] / [total prompt mechanisms] × 100% = ____%`
+- **Threshold:** 
+  - 95-100% = Complete coverage
+  - 80-94% = Acceptable with noted gaps
+  - <80% = Significant gaps, audit incomplete
+
+### 5.5. Semantic Fidelity Verification
+- Did the audit check whether outputs match the input theme?
+- Is there explicit theme → output comparison for each slot?
+- Are displacement/narrowing/drift patterns identified if present?
+
+### 5.6. Planning-Output Alignment
+- Did the audit verify that planning layer (Decision Block, Seeds, etc.) matches final prompts?
+- Are discrepancies between planning and execution flagged?
+
+### 5.7. New Features Verification (NEW v1.2)
+- Did the audit check the following v9.19 features (where applicable)?
+
+| Feature | Audit checked? | If not — gap? |
+|---------|---------------|---------------|
+| Density minimums per slot | | |
+| Detail Counting Rule (single category) | | |
+| Ban priority scan (fine, soft+conjugations) | | |
+| MODE 3 extensions ("becomes", physics cap, gradient) | | |
+| Rendering Tail Ban (position check) | | |
+| Final sentence physical + variation | | |
+| Realism Anchor phrases | | |
+| Threshold elements (scale + technique) | | |
+| Mood Anti-Pattern (physical prevention) | | |
+| Camera System (body + lens chars) | | |
+| Spatial Meaning Map (zone compliance) | | |
+| Sensory Exception (visible markers only) | | |
+| Narrated Absence Ban (S5) | | |
+| Module combination S5 rules | | |
+| Entry Angle compliance + rotation | | |
+| SHALLOW S1→S2 uniqueness (5 categories) | | |
+| SESSION_HISTORY tracking | | |
+| FRAME_SCALE consistency | | |
+| MJ_LIMITS compliance | | |
+| S5 Composite 4-test (compound themes) | | |
+| Lens-Aspect compatibility | | |
+| Lens-Magic compatibility | | |
+
+---
+
+## 6. Analysis Error Registry
+
+Compile a NUMBERED list of ALL discovered problems in your response.
+
+**Rule:** each line must contain a QUOTE from your analysis confirming the problem's presence. Without a quote, the line does not count.
+
+| # | Quote from analysis | Location (block + subpoint) | Error type | Criticality | What should be there instead |
+|---|---------------------|----------------------------|------------|-------------|------------------------------|
+| 1 | [___] | [___] | [___] | [___] | [___] |
+| 2 | [___] | [___] | [___] | [___] | [___] |
+| 3 | [___] | [___] | [___] | [___] | [___] |
+
+**Error type definitions:**
+- **Superficiality** — problem named but mechanism not revealed
+- **Abstractness** — statement is true but not tied to specific fragment
+- **Omission** — significant aspect not checked and not mentioned
+- **Task substitution** — instead of requested analysis, something else done (retelling, general advice)
+- **Contradiction** — two statements in analysis are incompatible
+- **Inapplicable advice** — recommendation impossible to implement in this prompt
+- **Template-ness** — statement can be applied to any prompt without changes
+- **Decorative self-criticism** — acknowledging problem without specifics, for show
+- **Coverage gap** — prompt mechanism exists but audit didn't verify it
+- **Semantic drift** — audit missed theme→output mismatch
+- **Misclassification** — problem attributed to wrong cause (e.g., prompt defect vs. model limitation vs. compression artifact)
+- **Compression blindness** — audit penalized deliberate compression as unclear writing
+
+**Criticality levels:**
+- **Critical** — fundamentally undermines audit validity
+- **Substantial** — significantly reduces audit usefulness
+- **Minor** — small gap, doesn't affect core conclusions
+
+---
+
+## 7. Summary Diagnostics
+
+### 7.1. Uniqueness Filter
+- Take ALL your recommendations. Cross out those that can be given to ANY prompt without changes. List remaining ones. Calculate percentage.
+- **Formula:** `[unique recommendations] / [all recommendations] × 100% = ____%`
+
+### 7.2. Applicability Filter
+- Of remaining unique ones — how many contain READY formulation (AFTER), not advice?
+- **Formula:** `[with ready formulation] / [unique] × 100% = ____%`
+
+### 7.3. Coverage Filter
+- What percentage of prompt mechanisms were actually verified?
+- **Formula:** `[verified mechanisms] / [total mechanisms] × 100% = ____%`
+
+### 7.4. Usefulness Index
+- `Index = (unique AND applicable AND verified) / (all recommendations + uncovered mechanisms) × 100% = ____%`
+
+### 7.5. Main Deficit
+- In one phrase: what is the ROOT CAUSE of most analysis errors? (Not symptom, but cause.)
+
+---
+
+## 8. Final Verdict
+
+### 8.1. Block Ratings
+
+| Block | Rating (1-10) | Main Problem | Key Action for Correction |
+|-------|---------------|--------------|---------------------------|
+| Potential Assessment | | | |
+| Problems & Errors | | | |
+| Specific Fixes | | | |
+| Input Format Guidance | | | |
+| Cross-cutting Consistency | | | |
+| Mechanism Coverage | | | |
+| New Features Coverage | | | |
+| **OVERALL** | | | |
+
+### 8.2. Calibration Scale (use when assigning ratings)
+
+| Score | Meaning |
+|-------|---------|
+| 1-2 | Block absent or completely irrelevant |
+| 3-4 | Block present but consists predominantly of template / abstract statements |
+| 5-6 | Has specificity but significant omissions or missing mechanism / justification |
+| 7-8 | Specific, justified, but has individual gaps or shortcomings |
+| 9-10 | Complete coverage, specificity with quotes, mechanisms explained, all applicable |
+
+### 8.3. Final Decision
+
+Based on audit — choose ONE:
+
+- **A.** Audit is sufficient — can be delivered to prompt author.
+- **B.** Audit requires targeted refinement — list specific points for correction.
+- **C.** Audit requires substantial rework — indicate which blocks to redo completely.
+- **D.** Audit needs to be conducted anew — explain why current one is unsalvageable.
+
+---
+
+## QUICK SELF-CHECK (run before submitting audit)
+
+Before finalizing, verify:
+
+### Coverage
+- [ ] All mapped Stages completed
+- [ ] Semantic Fidelity check executed
+- [ ] Planning → Output consistency verified
+- [ ] Mechanism coverage ≥80%
+- [ ] New Features Verification table (5.7) completed
+
+### Quality
+- [ ] Every problem has exact quote from output
+- [ ] Every fix has BEFORE/AFTER text
+- [ ] No "could clarify" without ready replacement
+- [ ] Problem → Fix traceability complete
+- [ ] Classification accuracy checked (prompt defect vs. model limitation vs. compression artifact)
+
+### Consistency
+- [ ] Block 1 assessment matches Block 2 problem severity
+- [ ] Fixes don't break what already works
+- [ ] All metrics calculated and reported
+
+### Anti-patterns Avoided
+- [ ] No performative self-criticism without evidence
+- [ ] No template statements applicable to any prompt
+- [ ] No problems without mechanism explanation
+- [ ] No error inflation for appearance of rigor
+- [ ] No compression blindness (penalizing deliberate brevity)
+
+**If any unchecked → fix before output.**
+
+End of AUDIT ANALYSIS.
+---
+

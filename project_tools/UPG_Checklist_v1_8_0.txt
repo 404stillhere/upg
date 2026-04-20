@@ -1,0 +1,2337 @@
+# 📋 UPG CHECKLIST v1.8.0
+
+Before launching a theme in UPG v9.19.0+, complete all blocks.
+Criticality: 🔴 = mandatory | 🟡 = important | 🟢 = desirable
+
+**80 parameters | 21 blocks | Includes Seeds + Light + Texture + Spatial + Temporal + Compatibility + Troubleshooting + Permutation + Pre-Output Scan + Session History**
+
+⚠️ **SEPARATION RULE:** This checklist operates in a SEPARATE session from UPG. If loaded alongside UPG prompt in the same chat, interview rules DO NOT override UPG pipeline. UPG runs phases 1→6 sequentially without waiting for user input between phases.
+
+**v1.8.0:** Synced with UPG v9.19.0. Added SESSION_HISTORY output (O2). Added P1.5 Conflict Check. Added dual-type element handling (P1). S4 physics cap=5 (P9). Added "becomes" to MODE 3 scan (I10). Updated "turning" replacement to "now [state]" (R3). Added Detail Counting Rule (I5). Added Expert Mode (0.X). Added MJ_LIMITS awareness (H1). De-duplicated repeated content with cross-references.
+**v1.7.2:** Added FRAME SCALE question (0.2, P10), Pre-Output Scan (I10), autopilot error prevention (Q10), PRE_OUTPUT_SCAN validation block (O2).
+**v1.7.1:** Added SHALLOW ARC lens exception (G3) and S1→S2 uniqueness guidance (Q9).
+**v1.7.0:** Added BLOCK P (Permutation Mode) — MODE 3 REMIX support for N-element combination with escalating strangeness gradient.
+**v1.6.1 PATCH:** Added D5 (Mandatory Element Language) — fixes conditional language that allows UPG to skip key elements.
+
+---
+
+## BLOCK 0: INTERACTION MODE
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK 0: INTERACTION MODE
+═══════════════════════════════════════════════════════════════
+
+### 0.1 Interview-First Rule 🔴
+
+CRITICAL: NEVER generate theme template immediately after receiving topic.
+
+When user provides a theme/topic, ALWAYS conduct structured interview FIRST.
+
+VIOLATION: Generating SETTING, SEEDS, VISUAL_VOCABULARY, or any template 
+fields before completing interview phases = protocol failure.
+
+EXCEPTION: User explicitly writes "SKIP" or "DEFAULTS" or "СРАЗУ" 
+→ then generate with sensible defaults.
+
+SEPARATION: This checklist is a STANDALONE interview tool. It does NOT 
+run inside UPG. Workflow: Session 1 (Checklist) → produces THEME TEMPLATE 
+→ Session 2 (UPG) → consumes it as STRUCTURED THEME INPUT.
+
+### 0.2 Interview Phases 🔴
+
+PHASE 1 — FOUNDATION (ask immediately after theme):
+
+1. CARRYING IMAGE
+   □ Confirm ONE noun as primary subject
+   □ If compound ("X in Y") — which is primary, which is attribute?
+   □ If IP/franchise: which version/era?
+   
+2. GOAL  
+   □ artistic — free interpretation    → FULL ARC
+   □ editorial — documentary           → FULL ARC
+   □ personal — personal project       → FULL ARC
+   □ commercial — sales/advertising    → SHALLOW ARC
+   □ scientific — accuracy/education   → SHALLOW ARC
+
+3. MEDIUM
+   □ Professional photography
+   □ Concept art / Digital painting
+   □ Illustration (book/editorial)
+   □ Cinematic (film frame look)
+   □ Other: _______________
+
+4. TONE/MOOD (select 1-3)
+   □ Epic / Heroic
+   □ Dark / Gritty
+   □ Romantic / Atmospheric  
+   □ Cozy / Intimate
+   □ Mysterious / Uncanny
+   □ Whimsical / Playful
+   □ Melancholic / Nostalgic
+   □ Other: _______________
+
+5. SETTING
+   □ Universe: "original" or [IP name]?
+   □ Geography: specific location(s)? — provide 2-3 alternatives for RERUN flexibility
+   □ Era: when + how old is subject?
+
+WAIT FOR USER RESPONSE BEFORE PHASE 2.
+
+PHASE 2 — VISUAL SYSTEM (ask after Phase 1 answered):
+
+6. LIGHT
+   □ Primary source: [sun/artificial/fire/mixed]?
+   □ Time of day: [dawn/day/golden hour/dusk/night]?
+   □ Quality: [hard dramatic/diffused/mixed]?
+
+7. KEY SURFACES (for texture planning)
+   □ Carrying image material: [what is it made of]?
+   □ Ground/environment: [concrete/grass/water/etc]?
+   □ Condition: [pristine/worn/ruined]?
+
+8. S5 TRACE TEST
+   □ If carrying image COMPLETELY REMOVED, what PHYSICAL evidence remains?
+   □ Can a stranger identify the theme in 30 seconds from traces alone?
+   □ User provides 2-3 trace ideas, or requests suggestions
+
+9. FRAME SCALE (NEW v1.7.2)
+   □ All frames — full scene (all key objects visible in every shot)?
+   □ Close-ups on individual elements allowed?
+   □ If allowed — in which slots?
+   
+   Default MODE 1/2: S2 may use different scale (tilt shot)
+   Default MODE 3: all frames full scene (RECOMMENDED)
+   
+   Options:
+   □ FULL SCENE — all slots show complete environment, all elements visible
+   □ MIXED — specify which slots allow close-up isolation
+   □ CLOSE-UP DOMINANT — rare, requires justification
+
+WAIT FOR USER RESPONSE BEFORE PHASE 3.
+
+PHASE 3 — SEEDS (ask after Phase 2 answered):
+
+10. SEED CONCEPTS
+
+Explain what each seed achieves, then ask for user direction:
+
+S3 (ADJACENT — obvious connection, <5 sec decode):
+───────────────────────────────────────────────────────────────
+WHAT IT DOES:
+Shows carrying image from a different perspective — immediately 
+recognizable. Viewer sees it and thinks "that's [theme]" instantly.
+
+PROVIDE AS DIRECTION, NOT SCENE:
+├── "Macro tactile interaction" (not "hands adjusting at hip")
+├── "Internal structure revealed" (not "opened case showing mechanism")
+├── "Mid-process moment" (not "bread torn open showing steam")
+└── Let UPG generate specific scene from direction
+
+Your direction: _______________
+───────────────────────────────────────────────────────────────
+
+S4 (OBLIQUE — unexpected angle, 10-15 sec decode):
+───────────────────────────────────────────────────────────────
+WHAT IT DOES:
+Shows theme indirectly — viewer needs 10-15 seconds to connect.
+Must pass RING 3 TEST: different environment, not just different angle.
+
+RING TEST (mandatory):
+├── Ring 1 FAIL: Carrying image directly visible
+├── Ring 2 FAIL: Same room/environment + part of carrying image visible
+├── Ring 3 PASS: Different environment OR only traces/shadows/echoes
+
+OBLIQUENESS TECHNIQUES (pick ONE):
+├── TEMPORAL SHIFT: Scene clearly before OR after — different location
+├── FUNCTIONAL SHIFT: Related object in unexpected context
+├── SPATIAL ECHO: Shape/shadow/pattern in completely different place
+├── MATERIAL TRACE: Residue/stain/imprint — carrying image absent
+
+WHERE TO SET IT — must differ from S1-S3 location:
+WORKSHOP | DOMESTIC | TRANSIT | FIELD | COMMERCIAL | BACKSTAGE
+
+DECODE TIME CHECK: Describe to someone unfamiliar. 
+If they get it in <5 sec → too obvious, revise.
+If they need >20 sec → too obscure, revise.
+
+Your direction: _______________
+Category: _______________
+───────────────────────────────────────────────────────────────
+
+S5 (ABSENCE — subject GONE, only traces):
+───────────────────────────────────────────────────────────────
+WHAT IT DOES:
+Shows space where carrying image WAS. Object COMPLETELY absent.
+For compound carrying images ("X in Y"): BOTH X and Y must be absent.
+
+ENVIRONMENTAL DEPARTURE RULE:
+S5 must show a space where carrying image is NOT visible.
+Show consequences, traces, aftermath — not the thing itself.
+
+TRACE TYPES (pick 2-3):
+├── PHYSICAL MARKS: dents, scratches, wear patterns
+├── REMNANTS: fragments, debris, residue
+├── ENVIRONMENTAL CHANGE: staining, discoloration, weathering
+├── EMPTY SPACE: outline, mounting holes, unfaded area
+└── CONTEXT WITHOUT CENTER: supporting objects, main one gone
+
+FRIEND TEST:
+Show this description to someone unfamiliar.
+Can they identify the theme within 30 seconds from traces alone?
+If NO → traces too generic, add specificity.
+
+Your traces: _______________
+───────────────────────────────────────────────────────────────
+
+11. SPECIAL ELEMENTS (optional)
+    □ Must-include objects?
+    □ Must-avoid elements?
+    □ Specific characters/requirements?
+
+AFTER PHASE 3 COMPLETE → Generate full template.
+
+### 0.X Expert Mode 🟢
+
+NEW IN v1.8.0:
+
+For experienced users who already know their seeds:
+
+EXPERT FLOW: Theme → Seeds (Phase 3) → Setting (Phase 1-2) → Generate
+
+Activation: User says "EXPERT" or "я знаю seeds" or provides seeds with theme.
+
+Differences from standard flow:
+├── Phase 3 (Seeds) asked FIRST — user likely has strong opinions here
+├── Phase 1-2 (Foundation + Visual) adapts to seed choices
+├── Setting derived FROM seeds, not seeds from setting
+├── Total questions: ~8-10 (less clarification needed)
+
+Standard flow remains DEFAULT. Expert mode = opt-in only.
+
+### 0.3 Question Format 🟡
+
+Present questions as:
+├── Checkbox lists (□ Option — description)
+├── Short explanations where needed
+├── "Other: _______________" always available
+
+Accept user responses in ANY format:
+├── "1, 3, photo" → parse as choices
+├── Full sentences → extract answers
+├── "как в прошлый раз" → reference previous
+├── Single words → map to options
+
+After each phase:
+├── Confirm what was understood
+├── Show remaining questions only
+├── Never re-ask answered questions
+
+### 0.4 Adaptive Depth 🟡
+
+SIMPLE THEME (e.g., "яблоко", "закат"):
+├── Phase 1: 3-4 key questions only
+├── Phase 2: Light + surface basics + frame scale
+├── Phase 3: Seed directions with examples
+├── Total: ~9 questions
+
+COMPLEX THEME (e.g., IP character, historical, multi-element):
+├── Phase 1: Full 5 questions
+├── Phase 2: Full 4 questions + sub-details
+├── Phase 3: Full seed guidance + Ring test
+├── Total: ~16 questions
+
+COMPOUND THEME (e.g., "woman in red dress"):
+├── Phase 1: Clarify primary vs attribute
+├── Phase 1.5: Confirm S5 means BOTH absent
+├── Phase 2: Standard + frame scale
+├── Phase 3: Emphasize ENVIRONMENTAL DEPARTURE
+├── Total: ~13 questions
+
+### 0.5 Response Triggers 🟡
+
+USER SAYS              → ACTION
+─────────────────────────────────────────────────────
+"[nouns with |]"       → Start BLOCK P interview (MODE 3)
+"remix" / "permutation"→ Start BLOCK P interview (MODE 3)
+"combine these"        → Start BLOCK P interview (MODE 3)
+"MODE 3"               → Start BLOCK P interview (MODE 3)
+"[topic only]"         → Start Phase 1 questions
+"EXPERT" / "я знаю seeds" → Start Expert Mode (Phase 3 first)
+"SKIP" / "СРАЗУ"       → Generate with defaults
+"как [previous theme]" → Copy structure, ask diffs only
+"продолжай"            → If mid-interview, next phase
+"готово" / "всё"       → If enough data, generate
+"подробнее"            → Expand current question
+"варианты"             → Show examples for current seed
+"не знаю"              → Suggest best default, confirm
+
+### 0.6 Mid-Interview Shortcuts 🟢
+
+User may accelerate at any point:
+
+"Остальное на твоё усмотрение"
+→ Fill remaining with contextually appropriate defaults
+→ Show what was assumed, allow corrections
+→ Generate template
+
+"Как для [reference theme]"  
+→ Copy structure from named theme
+→ Show key differences, confirm
+→ Generate template
+
+"Просто сделай красиво"
+→ Infer artistic goal, suggest medium
+→ Pick coherent seeds
+→ Generate template with safe defaults
+
+### 0.7 Interview Completion Signal 🟡
+
+When all phases complete, say:
+
+"✅ Все данные собраны. Генерирую шаблон темы..."
+
+Then output full template per BLOCK O format.
+
+If data incomplete but user insists:
+"⚠️ Не хватает: [list]. Заполню defaults. Продолжить?"
+
+### 0.8 Language Matching 🟢
+
+□ Detect user's language from theme input
+□ Conduct interview in SAME language
+□ Template output: follow user preference or ask
+□ Mixed OK: "artistic, photo, ночной город" = valid
+
+### 0.9 Output Language 🟢
+
+Template output language options:
+
+□ Same as interview (default)
+□ English (for direct UPG compatibility)
+□ Bilingual (key fields in both)
+
+Ask user preference before final output if not obvious.
+```
+
+---
+
+## BLOCK A: META
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK A: META
+═══════════════════════════════════════════════════════════════
+
+### A1. GOAL 🔴
+
+□ artistic   — free interpretation    → FULL ARC
+□ editorial  — documentary            → FULL ARC
+□ personal   — personal project       → FULL ARC
+□ commercial — sales/advertising      → SHALLOW ARC
+□ scientific — accuracy/education     → SHALLOW ARC
+
+### A2. ARC 🔴
+
+FULL ARC (artistic/editorial/personal):
+S1 ANCHOR → S2 TILT → S3 SEED1 → S4 SEED2 → S5 SEED3
+literal     shift     adjacent   oblique    absence
+
+SHALLOW ARC (commercial/scientific):
+S1 ANCHOR → S2 TILT → S3 CONTEXT → S4 DETAIL → S5 CONVERSION
+hero        angle     in use       macro       sellable
+
+### A3. MODE 🟡
+
+□ MODE: 1 — independent prompts (default)
+□ MODE: 2 — narrative arc: intact → use → wear → repurpose → trace
+□ MODE: 3 — remix permutation: N elements → escalating strangeness
+  Activates BLOCK P instead of standard interview (Blocks B, F skipped)
+
+### A4. Modules 🟡
+
+□ poster/banner/CTA    → Module A (text zones)
+□ packaging/bottle     → Module B (closure, label)
+□ explicit content     → Module C (redirect via lighting/silhouette)
+□ MODE: 2              → Module D (auto)
+□ none                 → no modules
+```
+
+---
+
+## BLOCK B: CARRYING IMAGE
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK B: CARRYING IMAGE
+═══════════════════════════════════════════════════════════════
+
+### B1. Single Object Test 🔴
+
+□ Can you name the carrying image with ONE noun?
+
+✅ SIMPLE: "Compass" | "Bread" | "Lighthouse"
+⚠️ COMPOUND: "Woman in red dress" — clarify:
+   └── Primary: woman (figure)
+   └── Attribute: red dress (clothing)
+   └── S5 requires: BOTH absent (not figure without dress)
+❌ THREE+: simplify to one or two
+
+### B2. Compound Carrying Image Rules 🔴
+
+If carrying image is compound (X in Y / X with Y / X wearing Y):
+
+□ Identify PRIMARY (the subject) vs ATTRIBUTE (the modifier)
+□ S1-S3: Both present, attribute defines character
+□ S4: May show attribute alone OR neither (oblique)
+□ S5 CRITICAL: Neither primary NOR attribute visible
+   
+   Example "woman in red dress":
+   ├── S1-S3: Woman wearing dress — both visible
+   ├── S4: Dress without woman OR shadow/echo of ensemble
+   └── S5: Space where dressed woman WAS — no woman, no dress
+   
+   ❌ WRONG S5: Woman without dress (primary still visible)
+   ❌ WRONG S5: Dress without woman (attribute still visible)
+   ✅ RIGHT S5: Empty room with traces of both
+
+### B3. S5 Trace Test 🔴
+
+□ Mentally remove the ENTIRE carrying image (all components)
+□ What PHYSICAL thing remains that proves it WAS there?
+□ Is the theme clear within 30 sec from remnants?
+
+Trace types:
+├── Physical (dents, tracks, holes, scratches, pressure marks)
+├── Remnants (debris, fragments, dust, residue, threads)
+├── Environmental (scorched, rusted, faded, compressed, stained)
+├── Empty space (outline, unfaded area, mounting holes, depression)
+└── Context without center (supporting objects remain, main gone)
+
+If you can't think of traces without showing the object → theme needs revision
+
+### B4. Enrichment Integrity 🟡
+
+□ Core nouns preserved after enrichment?
+□ Carrying image not replaced by abstraction?
+□ Original intensity maintained?
+□ Compound relationship preserved?
+```
+
+---
+
+## BLOCK C: SETTING
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK C: SETTING
+═══════════════════════════════════════════════════════════════
+
+### C1. UNIVERSE 🟡
+
+□ "original" — free world
+□ [IP name] — existing universe
+  → VISUAL_VOCABULARY mandatory
+  → IP proper nouns preserved verbatim
+  → Defining features NOT banned as cliché
+
+### C2. GEOGRAPHY — Multi-Location 🔴
+
+For RERUN flexibility, provide 2-3 location alternatives:
+
+□ Primary location: [specific with landmark reference]
+□ Alternative 1: [different environment type]
+□ Alternative 2: [different environment type]
+
+✅ GOOD:
+Primary: "Intimate room with black velvet surfaces"
+Alt 1: "Backstage dressing room with mirrors and harsh bulbs"
+Alt 2: "Photographer's studio with paper backdrop"
+
+❌ BAD:
+Primary: "A room" (too vague)
+Only one location (locks RERUN)
+
+Location categories for variety:
+INTERIOR: studio | domestic | industrial | commercial | transit
+EXTERIOR: urban | natural | architectural | transitional
+
+### C3. ERA 🟡
+
+□ Year/period + object age?
+  ✅ "2024 (dress is new, velvet shows slight use)"
+  ✅ "Late 12th century (castle 80 years old)"
+  ❌ "Long ago" / "Modern"
+
+### C4. AESTHETIC 🟡
+
+□ Style: [wabi-sabi | retrofuturism | gothic | brutalist | etc]
+□ Mood: [melancholy | sacred horror | intimate | epic | etc]
+□ References: [specific artist/movement/film/game]
+
+### C5. FACTION_POV 🟢
+
+□ Whose point of view?
+□ "No one — object alone" also valid
+□ Affects: what details noticed, what valued
+```
+
+---
+
+## BLOCK D: VISUAL VOCABULARY
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK D: VISUAL VOCABULARY
+═══════════════════════════════════════════════════════════════
+
+### D1. Carrying Image — 10 Components 🔴
+
+PHYSICAL (7 — minimum 5 filled):
+□ SHAPE     — geometry, silhouette, proportions
+□ SIZE      — specific measurement (meters/cm)
+□ MATERIAL  — exact material with weight/density if fabric
+              ✅ "matte crimson crepe 280gsm" 
+              ❌ "red fabric"
+□ COLOR     — specific with technical descriptors
+              ✅ "oxide-crimson with burgundy shadows"
+              ❌ "reddish"
+□ TEXTURE   — tactile quality, surface pattern, weave
+              ✅ "visible weave tooth, holds fold memory"
+              ❌ "textured surface"
+□ CONDITION — specific wear, damage, patina, compression
+              ✅ "use-compression in traffic areas, pristine at edges"
+□ UNIQUE    — what distinguishes from generic version
+              ✅ "structured boned bodice, narrow straps"
+
+BEHAVIORAL (3 — minimum 2 filled):
+□ LIGHT_RESPONSE — how surface interacts with light
+  ✅ "Absorbs light on flat planes, catches edge-light on folds;
+      reflects only as narrow gunmetal strip at extreme angles"
+  ❌ "Shiny" / "Matte"
+
+□ WEAR_PATTERN — WHERE and HOW age shows
+  ✅ "Compression marks at hip level from sitting;
+      hem shows dust accumulation; straps show stretch"
+  ❌ "Shows wear"
+
+□ ENVIRONMENT_RESPONSE — how it looks in specific conditions
+  ✅ "Absorbs 95% of incident light; shows pressure marks;
+      dust particles visible against pile in raking light"
+  ❌ "Looks good in the room"
+
+MINIMUM: 7/10 total (5/7 physical + 2/3 behavioral)
+
+### D2. Secondary Objects 🟡
+
+For each MUST_INCLUDE element:
+□ Shape + Material + Condition (minimum)
+□ Size if not obvious from context
+□ Unique identifying feature
+□ NO TIER 1 ADJECTIVES (see D4)
+□ NO CONDITIONAL LANGUAGE (see D5)
+
+### D3. Environment Base 🟡
+
+□ Ground/floor: material + condition
+□ Vertical surfaces: material + condition  
+□ Overhead: open sky / ceiling type / canopy
+□ Atmosphere: dust / fog / humidity / haze / clear
+
+### D4. TIER 1 Pre-Scan 🔴
+
+BEFORE finalizing any VV field, scan for these banned adjectives:
+
+TIER 1 BANNED (must qualify with physical measurement OR replace):
+├── soft → diffused / muted / low-contrast / [material + Shore A]
+├── fine → particulate / narrow / hairline / [measurement]
+├── smooth → polished / satin / [surface finish spec]
+├── gentle → gradual / low-angle / [degree measure]
+├── subtle → understated / hint-of / [percentage]
+├── elegant → proportioned / balanced / [geometric relationship]
+├── delicate → thin-walled / lightweight / [thickness/weight]
+├── clean → uncluttered / minimal / [specific absence]
+├── fresh → recently-cut / undried / [time since change]
+└── simple → single-element / unadorned / [component count]
+
+TIER 2 BANNED (always replace materially):
+nice, beautiful, lovely, pure, clear, calm, quiet, refined, pretty, pleasant
+
+SCAN ALL FIELDS:
+□ VISUAL_VOCABULARY — all entries
+□ TEXTURE_PALETTE — all entries
+□ LIGHT — quality and shadow descriptions
+□ SENSORY_MARKERS — visible evidence descriptions
+□ CONTRAST_PAIRS — both sides of each pair
+
+If found → rewrite BEFORE including in template.
+
+Examples of required rewrites:
+❌ "soft diffused key" → ✅ "diffused key with gradual falloff"
+❌ "fine weave visible" → ✅ "narrow weave visible" / "weave tooth visible"
+❌ "smooth skin" → ✅ "skin with visible pore texture" / "even-toned skin"
+❌ "soft-focused" → ✅ "defocused" / "blur-dominant" / "dissolved into blur"
+❌ "elegant collapse" → ✅ "controlled collapse" / "structured collapse"
+
+### D5. MANDATORY ELEMENT LANGUAGE 🔴
+
+PROBLEM: Conditional language gives UPG permission to skip key elements.
+
+SCAN all MUST_INCLUDE and VV BEHAVIORAL entries for:
+
+❌ BANNED PHRASES (= "skip if inconvenient"):
+├── "visible only at certain angles"
+├── "when conditions align"
+├── "subtle" / "ephemeral" / "delicate"
+├── "may appear" / "can form" / "sometimes visible"
+├── "hint of" / "suggestion of" / "trace of" (for ACTIVE elements)
+├── "if lighting permits" / "in right conditions"
+└── "occasionally" / "at times" / "depending on"
+
+✅ MANDATORY LANGUAGE (= "include always"):
+├── "MUST BE VISIBLE in S1, S2, S3" (specify slots)
+├── "ALWAYS present regardless of angle/action/lighting"
+├── "EXPLICIT, not implied or suggested"
+├── "even during motion / even if partially obscured"
+├── "minimum [N] slots" / "every slot where [subject] visible"
+└── "NON-NEGOTIABLE" (for critical elements)
+
+EXAMPLES:
+
+❌ BEFORE (conditional):
+"Light particle wings (subtle, ephemeral — visible only at certain angles)"
+
+✅ AFTER (mandatory):
+"Light particle wings (MUST BE VISIBLE in S1, S2, S3 — wing-shape EXPLICIT 
+in every shot where lion present, regardless of angle or action, 
+2m span forming clear feather-structure, NOT scattered particles)"
+
+❌ BEFORE:
+"Ember eyes (internal glow when in shadow)"
+
+✅ AFTER:
+"Ember eyes (internal glow MANDATORY in S1, S2, S3 — visible even in 
+direct sunlight, even through dust/motion blur, orange-red cores 
+ALWAYS distinguishable, NON-NEGOTIABLE)"
+
+❌ BEFORE:
+"Magic aura (appears around hands sometimes)"
+
+✅ AFTER:
+"Magic aura (MUST SURROUND hands in every slot where hands visible — 
+blue-white glow, 5cm radius, ALWAYS present, not conditional)"
+
+RULE: If element is important enough for MUST_INCLUDE, 
+it's important enough for MANDATORY language.
+No conditionals. No "sometimes." No "may."
+
+TEST: Read your description. Could UPG legally skip this element 
+based on your wording? If YES → rewrite with mandatory language.
+```
+
+---
+
+## BLOCK E: CONTROL
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK E: CONTROL
+═══════════════════════════════════════════════════════════════
+
+### E1. MUST_INCLUDE — Photo Test + Mandatory Language 🔴
+
+For each element, 5 checks:
+□ Noun? (not "atmosphere of abandonment")
+□ Can be photographed in close-up?
+□ Unique to this theme?
+□ Has size + color + material defined?
+□ Uses MANDATORY language, not conditional? (see D5)
+
+Formula: [object] + [characteristic] + [condition] + [SLOT REQUIREMENT]
+Example: "navigation chart (salt-stained, torn edge, coffee ring) — VISIBLE S1-S4"
+Example: "ember eyes (internal orange glow, fire behind iris) — MANDATORY S1, S2, S3"
+
+### E2. MUST_AVOID — Expanded 🔴
+
+CONTENT categories (minimum 3):
+□ People (tourists, silhouettes, faces, crowds)
+□ Physical impossibilities for setting
+□ Genre clichés (stock-photo compositions)
+□ Unwanted tone (gore, panic, sentimentality)
+□ Anachronisms (wrong era objects)
+□ Incorrect condition (too clean, too damaged)
+
+DETAIL TRAPS (minimum 2):
+□ Generic surfaces: "old wall" → specify material/finish
+□ Unanchored objects: "floating" → specify spatial relation
+□ Default lighting: "dramatic" → specify source/direction
+□ Costume-level detail: "medieval" → specify century/region
+□ Color vagueness: "blue" → specify hue (cobalt/cerulean/navy)
+□ Scale ambiguity: no size reference → add one
+
+For each trap, provide replacement standard in VV.
+
+### E3. Cliché Blacklist 🟡
+
+□ 3 banal/stock-photo representations of theme:
+  Example (compass): 
+  ├── Compass on generic "treasure map"
+  ├── Hand holding compass toward horizon
+  └── Compass with motivational text overlay
+
+IP Exception: Do NOT ban defining IP features.
+Test: removing it makes image unrecognizable? → KEEP
+```
+
+---
+
+## BLOCK F: SEEDS — GENERATION & VERIFICATION
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK F: SEEDS — GENERATION & VERIFICATION
+═══════════════════════════════════════════════════════════════
+
+### F1. Seed Format Rule 🔴
+
+Seeds should be DIRECTIONS, not complete scenes.
+
+❌ TOO SPECIFIC (locks UPG, prevents RERUN variation):
+"Close-up detail of hands adjusting dress at hip — fingers 
+pressing matte crimson fabric, pulling at side seam"
+
+✅ DIRECTION (gives UPG room to generate):
+"Macro tactile interaction — fingers engaging with fabric,
+visible pressure response, cropped to gesture"
+
+❌ TOO SPECIFIC:
+"Red dress pooled on black floor — elegant collapse of fabric,
+empty of figure, shadow of departed woman nearby"
+
+✅ DIRECTION:
+"Temporal aftermath — garment without wearer, evidence of 
+recent presence, different composition than S1-S3"
+
+The difference: direction gives WHAT and WHY, not exact HOW.
+
+### F2. S3 Adjacent Seed 🟡
+
+Requirements:
+□ Decode time: <5 seconds
+□ Carrying image: clearly visible
+□ Difference from S1-S2: angle/scale/moment, not just crop
+□ Format: direction, not scene description
+
+Template:
+S3_ADJACENT: {
+  direction: "[what type of view/moment]"
+  carrying_image: "[how it appears]"
+  sensory_marker: "[physical evidence of non-visual quality]"
+  decode: "<5 sec"
+}
+
+### F3. S4 Oblique Seed — Ring Test 🔴
+
+MANDATORY RING CLASSIFICATION:
+
+Ring 1 — FAIL:
+├── Carrying image directly and fully visible
+└── Example: dress on hanger in same room
+
+Ring 2 — FAIL:
+├── Same environment + part of carrying image visible
+├── Example: dress on floor in same velvet room
+└── Example: shadow of figure in same space
+
+Ring 3 — PASS:
+├── Different environment entirely, OR
+├── Only indirect traces (no part of carrying image visible)
+└── Example: red thread on tailor's workbench (different room)
+└── Example: dress-shaped gap in closet (different space)
+
+DECODE TIME TEST:
+□ Describe S4 to someone who hasn't seen S1-S3
+□ Time how long until they connect to theme
+□ Target: 10-15 seconds
+□ <5 sec = too obvious (Ring 1-2), revise
+□ >20 sec = too obscure, simplify
+
+CATEGORY MUST DIFFER from S1-S3 setting:
+If S1-S3 in studio/domestic → S4 in workshop/transit/commercial/field
+
+### F4. S5 Absence Seed — Environmental Departure 🔴
+
+ENVIRONMENTAL DEPARTURE RULE (FULL ARC):
+S5 must show space where carrying image is NOT visible.
+
+FOR COMPOUND CARRYING IMAGES:
+If carrying image = "X in Y" (e.g., "woman in red dress"):
+├── X (woman) must be ABSENT
+├── Y (dress) must be ABSENT  
+└── Only traces of the ENSEMBLE remain
+
+❌ FAILS ENVIRONMENTAL DEPARTURE:
+├── Woman without dress (X visible, only Y absent)
+├── Dress without woman (Y visible, only X absent)
+├── Silhouette of woman (X partially visible)
+├── Reflection of figure (X visible via reflection)
+
+✅ PASSES ENVIRONMENTAL DEPARTURE:
+├── Empty room with: compressed velvet where she stood,
+│   faint perfume-shaped air, warmth fading from surfaces
+├── Closet with dress-shaped gap, hanger, tissue paper
+├── Mirror reflecting empty room where figure was
+
+FRIEND TEST:
+□ Describe ONLY the S5 scene (no context from S1-S4)
+□ Ask: "What was here before?"
+□ Must get correct answer within 30 seconds
+□ If fails → traces too generic, add specificity
+
+### F5. Seed Diversity Check 🟡
+
+□ All 3 seeds use DIFFERENT locations
+□ All 3 seeds use DIFFERENT moods/tones
+□ Metaphorical families different:
+  [WAR | DOMESTIC | NATURE | TECHNOLOGY | TIME | SACRED | INDUSTRIAL]
+□ S4 category not institutional (museum/archive/memorial/civic)
+□ Decode time increases: <5s → 10-15s → 30s
+
+### F6. Sensory Markers — Category Format 🟡
+
+Provide sensory markers as CATEGORIES with example evidence,
+not as specific phrases (prevents RERUN lexical lock):
+
+❌ LOCKS RERUN:
+"temperature: goosebumps on bare shoulder, fine hair raised"
+
+✅ ALLOWS VARIATION:
+"temperature evidence on skin — e.g., goosebumps, flush contrast,
+visible breath, pallor shift, or fine hair response"
+
+For each slot:
+□ Name the sensory category (temperature/sound/touch/smell)
+□ Provide 2-3 alternative visible manifestations
+□ Let UPG choose which to use per run
+
+### F7. Magic/Key Element Slot Enforcement 🔴
+
+NEW IN v1.6.1:
+
+For any MUST_INCLUDE element that is:
+├── Magical (glowing eyes, particle effects, auras)
+├── Signature (defining visual of this specific theme)
+├── Requested explicitly by user as important
+
+ADD TO SEED DIRECTIONS:
+
+S3_ADJACENT: {
+  direction: "[action/moment]"
+  MANDATORY_ELEMENTS: "[element A] MUST BE VISIBLE + [element B] MUST BE VISIBLE"
+}
+
+Example:
+S3_ADJACENT: {
+  direction: "Peak action freeze — landing impact"
+  MANDATORY_ELEMENTS: "ember eyes VISIBLE at intensity peak + 
+                       light particles VISIBLE as motion-trail wing-shape"
+}
+
+This ensures UPG cannot deprioritize magic elements 
+even when seed focuses on physical action.
+```
+
+---
+
+## BLOCK G: ARC PLANNING
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK G: ARC PLANNING
+═══════════════════════════════════════════════════════════════
+
+### G1. Entry Angle 🟡
+
+NOTE: When MODE 3 active, Entry Angles are OPTIONAL.
+BLOCK P handles arc planning via PERMUTATION structure.
+Standard G1-G6 fields still apply for lens/contrast/spatial.
+
+S1 and S2 open with DIFFERENT angle types:
+
+│ Angle    │ First word/phrase pattern          │
+├──────────┼────────────────────────────────────┤
+│ SCALE    │ number/dimension: "Fifteen-meter"  │
+│ TIME     │ temporal marker: "By third week"   │
+│ LOCATION │ place preposition: "At crater's edge" │
+│ WEATHER  │ weather state: "Through morning fog"  │
+│ CULTURAL │ cultural element: "Shimenawa wraps"   │
+│ MATERIAL │ material as subject: "Oxidized copper" │
+│ PERSPECTIVE │ vantage indicator: "From above"  │
+│ ACTIVITY │ frozen action: "Mid-pour"           │
+
+Rotation across consecutive themes:
+A: SCALE + TIME  
+B: TIME + LOCATION
+C: CULTURAL + LOCATION  
+D: SCALE + LOCATION
+
+User Override: If you specify entry angles, they take precedence.
+Leave blank to let UPG apply rotation automatically.
+
+### G2. Contrast Pairs — Expanded 🟡
+
+□ Minimum 3 contrasting pairs across series:
+
+PHYSICAL:
+├── Light/darkness (highlight vs deep shadow)
+├── Material A vs B (organic vs synthetic, rough vs polished)
+├── Scale (massive vs miniature in same frame)
+├── Condition (pristine vs decayed)
+├── Temperature markers (frost vs heat evidence)
+
+COMPOSITIONAL:
+├── Dense vs Sparse (cluttered vs empty)
+├── Sharp vs Diffused (focused vs bokeh)
+├── Geometric vs Organic (architecture vs nature)
+├── Static vs Motion evidence (fixed vs blur/ripple)
+
+CHROMATIC:
+├── Warm vs Cool dominant zones
+├── Saturated accent vs Desaturated field
+├── High key vs Low key (overall light vs dark)
+
+□ Each slot has ≥1 internal contrast
+□ Series uses ≥3 DIFFERENT contrast types
+□ No contrast type used >2 slots
+
+### G3. Lens Sequence — With Compatibility Check 🔴
+
+Available lenses:
+PHOTO | CINE | TEXTURAL | PAINTERLY | ENVIRONMENTAL
+SYMBOLIC | MINIMAL | SENSORY | GRAPHIC
+
+Rules:
+□ ≥4 different lenses in series
+□ No lens >2 times
+□ Adjacent slots ≠ identical lens
+
+LENS-ASPECT COMPATIBILITY CHECK (mandatory):
+┌─────────────┬────────────────────────────────────┐
+│ Lens        │ Compatible Aspects                 │
+├─────────────┼────────────────────────────────────┤
+│ CINE        │ 2.39:1, 2.00:1, 16:9 ONLY         │
+│ PHOTO       │ Any                                │
+│ TEXTURAL    │ Any (macro framing)               │
+│ PAINTERLY   │ Any                                │
+│ ENVIRONMENTAL│ 16:9, 3:2, 2.39:1 preferred       │
+│ SYMBOLIC    │ 1:1, 4:5 preferred                │
+│ MINIMAL     │ Any                                │
+│ SENSORY     │ Any                                │
+│ GRAPHIC     │ Any                                │
+└─────────────┴────────────────────────────────────┘
+
+If LENS_SEQUENCE contains CINE but ASPECT is not widescreen:
+→ Replace CINE with PHOTO + cinematic language
+→ OR change ASPECT to 2.39:1 for that slot
+→ DO NOT submit incompatible combination
+
+Example conflict:
+❌ LENS_SEQUENCE: S2=CINE + ASPECT: 3:4 (portrait)
+✅ LENS_SEQUENCE: S2=PHOTO + ASPECT: 3:4 (with cinematic framing notes)
+✅ LENS_SEQUENCE: S2=CINE + ASPECT: 2.39:1
+
+SHALLOW ARC LENS EXCEPTION (commercial/scientific):
+If GOAL = commercial or scientific AND PHOTO appears >2×:
+□ Document observation point per PHOTO slot in seed directions
+□ Observation point types for PHOTO:
+  - Hero (3/4 angle, product-forward)
+  - Alternate angle (profile, overhead, rear)
+  - Lifestyle context (product in use, different setting)
+  - Macro detail (tight crop, surface/texture focus)
+  - E-commerce flat (centered isolation, neutral)
+□ Each PHOTO occurrence must use DIFFERENT observation point
+□ UPG accepts PHOTO >2× through ENVIRONMENTAL RELIEF if observation points differ
+
+Example (cosmetics):
+S1=PHOTO (hero 3/4), S2=PHOTO (tight crop detail), S3=PHOTO (lifestyle vanity),
+S4=TEXTURAL (macro surface), S5=PHOTO (e-commerce flat)
+→ PHOTO 4× acceptable: all use different observation points
+
+### G4. Contrast Level Distribution 🔴
+
+Assign to each slot:
+□ S1: [HIGH / MEDIUM / LOW]
+□ S2: [HIGH / MEDIUM / LOW]  
+□ S3: [HIGH / MEDIUM / LOW]
+□ S4: [HIGH / MEDIUM / LOW]
+□ S5: [HIGH / MEDIUM / LOW]
+
+DISTRIBUTION RULE: Maximum 2 slots per level.
+
+❌ INVALID: M / H / M / L / M (M appears 3 times)
+✅ VALID: M / H / M / L / H (M×2, H×2, L×1)
+✅ VALID: H / M / L / M / H (H×2, M×2, L×1)
+
+If you need 3 of same level, UPG will accept with OVERRIDE flag,
+but image variety suffers. Revise if possible.
+
+### G5. Spatial Composition 🟡
+
+□ Depth Planes (minimum 2 per slot, except S4 macro):
+  ├── Foreground: [element, approximate distance]
+  ├── Midground: [carrying image relation]
+  └── Background: [depth cue, termination]
+
+□ Spatial Anchoring — use physical prepositions:
+  beside | beneath | leaning against | partially obscuring
+  resting on | suspended above | embedded in | emerging from
+
+□ BANNED spatial language:
+  "in the scene" / "in the frame" / "in composition"
+  → Replace with physical spatial relationship
+
+□ Negative Space:
+  ├── Location in frame
+  ├── What fills it (sky/wall/water/darkness/fog)
+  └── Approximate percentage
+
+### G6. Lens-Magic Compatibility Check 🟡
+
+NEW IN v1.6.1:
+
+If MUST_INCLUDE contains magic/signature elements that require 
+face/eyes/full body visibility, CHECK lens assignments:
+
+TEXTURAL lens = macro = face likely OUT OF FRAME
+→ If magic requires eyes (ember glow, etc.) 
+→ Do NOT assign TEXTURAL to that slot
+→ Use PHOTO or SENSORY instead
+
+Example conflict:
+❌ S3=TEXTURAL (ground-level macro) + "ember eyes MANDATORY S3"
+✅ S3=PHOTO (can include face) + "ember eyes MANDATORY S3"
+✅ S3=SENSORY (full body with sensory markers) + "ember eyes MANDATORY S3"
+
+Before finalizing LENS_SEQUENCE, verify each slot's lens 
+can physically show required MUST_INCLUDE elements.
+
+### G7. Frame Scale Consistency 🔴
+
+NEW IN v1.7.2:
+
+If user selected FULL SCENE in interview (0.2 question 9):
+□ ALL slots must use wide/environmental focal lengths (24-35mm)
+□ NO isolating telephoto (85mm+) unless explicitly approved
+□ ALL key structures/objects visible in EVERY frame
+□ Difference between slots = transformation STATE, not camera DISTANCE
+
+If user selected MIXED:
+□ Document which specific slots allow close-up
+□ Close-up slots use PHOTO lens with appropriate focal length
+□ Full-scene slots use ENVIRONMENTAL lens
+
+LENS_SEQUENCE must match FRAME_SCALE choice:
+FULL SCENE → all ENVIRONMENTAL/CINE wide
+MIXED → specified slots PHOTO, others ENVIRONMENTAL
+CLOSE-UP → PHOTO/TEXTURAL dominant (rare for MODE 3)
+```
+
+---
+
+## BLOCK H: TECHNICAL
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK H: TECHNICAL
+═══════════════════════════════════════════════════════════════
+
+### H1. Platform 🟡
+
+□ Midjourney — ≤3 sentences S1-S4, ≤4 S5, max 5 elements
+  **NEW v1.8.0:** UPG v9.19+ supports MJ_LIMITS input parameter.
+  If MJ updates limits, add to template:
+  MJ_LIMITS: {max_sent:[3,3,3,3,4], max_elem:5, version:"v7"}
+  Default (omit): v6 limits apply.
+□ Flux/Aurora — natural language, no hard limits
+□ SD — ≤100 words + negative prompt
+□ Universal — balanced for all platforms
+
+### H2. Aspect Ratio 🔴
+
+□ Vertical: 4:5, 3:4
+□ Horizontal: 3:2, 16:9  
+□ Square: 1:1
+□ Cinematic: 2.39:1, 2.00:1
+□ Module A/B: match packaging/poster spec
+
+CRITICAL: Check compatibility with LENS_SEQUENCE (see G3).
+If any slot uses CINE lens → ASPECT must be 2.39:1 or 2.00:1
+
+CRITICAL: ASPECT must be UNIFIED across series (one value, not per-slot).
+
+### H3. Rendering 🟡
+
+□ PHOTO: focal length + f-stop each slot
+  Macro: 100mm f/2.8 | Table: 85mm f/1.8 | Portrait: 85mm f/2
+  Environmental: 35mm f/5.6 | Wide: 24mm f/8 | Street: 50mm f/4
+  
+□ Non-photo: rendering phrase in ≥3/5 slots
+  Place in 2nd or 3rd-to-last sentence
+  NOT in final sentence (Rendering Tail Ban)
+  
+□ Rendering vocabulary must NOT contain TIER 1 adjectives:
+  ❌ "soft brushwork" → ✅ "loose brushwork"
+  ❌ "delicate linework" → ✅ "thin linework" / "hairline strokes"
+
+### H4. Palette Planning 🟢
+
+□ Dominant: [primary color, coverage ~60%]
+□ Secondary: [supporting color, ~30%]  
+□ Accent: [contrast pop, ~10%]
+□ Temperature: [overall warm/cool/neutral]
+
+□ Grayscale test: still readable without color?
+□ Named colors only (❌ "blue" → ✅ "cerulean")
+```
+
+---
+
+## BLOCK L: LIGHT DESIGN
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK L: LIGHT DESIGN
+═══════════════════════════════════════════════════════════════
+
+### L1. Primary Light Source 🔴
+
+□ Type: [natural sun / overcast / golden hour / blue hour /
+         artificial tungsten / fluorescent / neon / fire /
+         bioluminescent / mixed natural+artificial]
+         
+□ Direction: [front / side 45° / side 90° / back / rim /
+              overhead / below / dappled through obstruction]
+              
+□ Quality: [hard direct / diffused / dappled / 
+            reflected / transmitted through material]
+            DO NOT USE: "soft" — use "diffused" instead
+            
+□ Color temperature: [2700K warm / 4000K neutral / 
+                      5500K daylight / 6500K+ cool / mixed]
+
+### L2. Shadow Character 🟡
+
+□ Edge quality: [sharp knife-edge / gradual falloff / absent]
+                DO NOT USE: "soft edge" — use "gradual falloff"
+□ Density: [opaque black / translucent / colored by bounce]
+□ Shadow role: [defines form / reveals texture / 
+                creates pattern / conceals detail / 
+                indicates time]
+
+### L3. Contrast Level per Slot 🟡
+
+Assign to each slot (must match G4):
+□ S1: [HIGH / MEDIUM / LOW]
+□ S2: [HIGH / MEDIUM / LOW]  
+□ S3: [HIGH / MEDIUM / LOW]
+□ S4: [HIGH / MEDIUM / LOW]
+□ S5: [HIGH / MEDIUM / LOW]
+
+HIGH = ≥2 stops highlight to shadow, specular + deep black
+MEDIUM = visible gradient, no pure black or blown white
+LOW = flat, atmospheric, shadows lifted
+
+Constraint: Max 2 slots at same level (see G4).
+
+### L4. Light Interaction with Surfaces 🟡
+
+□ How does light behave ON carrying image?
+  [absorbs / reflects specular / reflects diffuse / 
+   scatters (subsurface) / transmits / refracts]
+
+□ What does light REVEAL?
+  [wear patterns / surface texture / dust / moisture / 
+   material variation / age indicators / hidden detail]
+
+□ Secondary surface light behavior? (minimum 1)
+```
+
+---
+
+## BLOCK X: TEXTURE PALETTE
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK X: TEXTURE PALETTE  
+═══════════════════════════════════════════════════════════════
+
+### X1. Surface Inventory 🟡
+
+List 3-5 dominant surfaces in scene:
+
+□ Carrying image surface: [material + finish + condition]
+□ Ground plane: [material + finish + condition]
+□ Background surface: [material + finish + condition]
+□ Secondary object: [material + finish + condition]
+□ Atmospheric texture: [particles / haze / clear]
+
+TIER 1 CHECK: Scan all entries for banned adjectives before finalizing.
+
+Example (after TIER 1 compliance):
+├── Carrying image: matte crimson crepe — visible weave tooth,
+│   holds fold memory, fabric pools at floor
+├── Ground: cotton-silk pile velvet — 3mm depth, seamless,
+│   pile direction visible, use-compression in traffic areas
+├── Background: velvet drape — absorbs light, creates negative space
+├── Secondary: skin — visible pore texture in detail, warmth
+│   contrast against cool shadows
+└── Atmospheric: clear interior air, occasional dust mote in beam
+
+### X2. Texture Contrast Pairs 🟡
+
+□ Minimum 2 texture contrasts per scene:
+
+├── Hard vs Pliable (stone beside fabric, metal against cloth)
+├── Rough vs Polished (bark vs glass, concrete vs water)
+├── Organic vs Manufactured (skin vs steel, wood vs plastic)
+├── Matte vs Reflective (chalk vs lacquer, fabric vs chrome)
+├── Dry vs Wet (dust vs condensation, sand vs dew)
+├── Dense vs Porous (marble vs pumice, rubber vs foam)
+├── Regular vs Chaotic (brick vs rust, tile vs lichen)
+
+### X3. Material Behavior 🟢
+
+□ How does [primary material] look in [this specific light]?
+□ How does [primary material] respond to [atmosphere/weather]?  
+□ What does [primary material] look like at [this age]?
+
+Fill for carrying image at minimum.
+Bonus: fill for 1 secondary surface.
+```
+
+---
+
+## BLOCK T: TEMPORAL EVIDENCE
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK T: TEMPORAL EVIDENCE
+═══════════════════════════════════════════════════════════════
+
+### T1. Time of Day — Physical Markers 🟡
+
+□ Shadow angle: [long low-sun / medium / short overhead / absent]
+□ Sky condition: [specific gradient or cloud type]
+  ✅ "Salmon-pink gradient fading to pale blue at 20° altitude"
+  ❌ "Sunset colors"
+□ Artificial light state: [off / on / transitioning]
+□ Activity markers: [morning dew / lunch debris / evening insects]
+
+### T2. Season — Physical Markers 🟡
+
+□ Vegetation state: [bare / budding / full leaf / turning / dormant]
+□ Ground condition: [frozen / thawing mud / dry / leaf-covered / snow]
+□ Light quality: [high summer sun / low golden winter / etc]
+□ Fauna indicators: [specific to season]
+
+### T3. Object Age — Wear Evidence 🟡
+
+□ How old is carrying image? [specific age or range]
+□ Where does wear show FIRST on this type of object?
+  ✅ "Dress: slight stretch at straps, compression marks at
+      hip level from sitting, dust accumulation at hem"
+□ What does THIS material look like at THIS age?
+  ✅ "New crepe: crisp fold edges, no pilling, even dye"
+  ❌ "New fabric: looks new"
+
+### T4. Scene Duration 🟢
+
+□ How long has scene been in current state?
+□ What evidence shows duration?
+  ✅ "Pose held for seconds — fabric still settling"
+  ✅ "Room empty for minutes — warmth fading from surfaces"
+  ✅ "Dust settled on horizontal surfaces — hours undisturbed"
+```
+
+---
+
+## BLOCK Q: COMMON ISSUES
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK Q: COMMON ISSUES
+═══════════════════════════════════════════════════════════════
+
+### Q1. "Can't think of S4 seed" 🟡
+
+→ See F3 for full Ring 3 classification.
+
+Try these prompts — but remember RING 3 (different environment):
+
+Where was carrying image BEFORE current state?
+├── Workshop where it was made (different room)
+├── Store where it was sold (different space)
+└── Transport that delivered it (vehicle interior)
+
+What USES same principle in different context?
+├── Similar geometry in different field
+└── Same function in different profession
+
+What does carrying image AFFECT in a different space?
+├── Document mentioning it (office, not studio)
+├── Tool that maintains it (workshop, not home)
+└── Container that stores it (closet, not room)
+
+ALWAYS CHECK: Is this Ring 3? If same room → revise.
+
+### Q2. "S5 traces too vague" 🟡
+
+Make traces MORE SPECIFIC:
+
+Generic: "evidence she was there"
+Specific: "compressed velvet pile where she stood for minutes,
+slowly re-expanding; warmth fading from the spot"
+
+Generic: "empty space where dress was"
+Specific: "hanger with shoulder dimples, tissue paper below,
+faint static charge attracting dust motes in light beam"
+
+ADD MULTIPLE TRACES:
+Single trace = too subtle → use 3 complementary traces
+Each trace type different: physical + environmental + contextual
+
+### Q3. "Compound carrying image S5" 🔴
+
+→ See B2 for compound rules, F4 for Environmental Departure.
+
+Quick reminder: S5 must show absence of ALL components.
+
+"Woman in red dress":
+├── ❌ Woman without dress (woman still visible)
+├── ❌ Dress without woman (dress still visible)  
+└── ✅ Empty space with traces of dressed woman
+
+"Man with guitar":
+├── ❌ Man without guitar
+├── ❌ Guitar without man
+└── ✅ Empty stage with pick marks, cable coils, amp warmth
+
+"Child holding balloon":
+├── ❌ Child without balloon
+├── ❌ Balloon without child
+└── ✅ Empty park bench with string fragment, small handprint in dust
+
+### Q4. "CINE lens but portrait aspect" 🔴
+
+CINE requires widescreen (2.39:1 or 16:9).
+Portrait aspects (3:4, 4:5) are incompatible.
+
+If you want CINE aesthetic with portrait framing:
+→ Use PHOTO lens + add cinematic language:
+  "letterbox-reminiscent composition, practical light sources
+   visible in frame, implied narrative moment"
+
+If you want true CINE:
+→ Change ASPECT to 2.39:1 for that slot
+→ Or use 16:9 as compromise
+
+### Q5. "Entry Angles feel forced" 🟢
+
+If assigned angle doesn't fit theme naturally:
+→ Leave ENTRY_ANGLES field blank in template
+→ UPG will apply rotation automatically
+→ Better to omit than force unnatural opening
+
+### Q6. "TIER 1 keeps appearing" 🟡
+
+→ See D4 for full TIER 1 replacement table.
+
+Most common escapes and quick fixes:
+
+"soft light" → "diffused light" / "low-contrast light"
+"soft focus" → "defocused" / "shallow plane" / "blur-dominant"
+"fine detail" → "granular detail" / "narrow detail" / "hairline detail"
+"smooth surface" → "polished surface" / "even surface" / "satin finish"
+
+When in doubt: add a measurement or material specification.
+
+### Q7. "Magic elements inconsistent across slots" 🔴
+
+NEW IN v1.6.1:
+
+PROBLEM: Magic/signature elements appear in some slots but not others.
+
+CAUSE: Conditional language in MUST_INCLUDE gave UPG permission to skip.
+
+SOLUTION:
+
+1. CHECK MUST_INCLUDE for conditional phrases (see D5)
+   ❌ "visible only at certain angles"
+   ❌ "when conditions align"
+   ❌ "subtle" / "ephemeral"
+
+2. REWRITE with mandatory language:
+   ✅ "MUST BE VISIBLE in S1, S2, S3"
+   ✅ "ALWAYS present regardless of angle"
+   ✅ "NON-NEGOTIABLE"
+
+3. ADD to each seed's MANDATORY_ELEMENTS field (see F7)
+
+4. CHECK lens compatibility (see G6):
+   If magic requires face → don't use TEXTURAL
+   If magic requires full body → don't use extreme macro
+
+5. For Midjourney: magic elements must be in TOP 5 elements,
+   not optional additions that get cut for word count.
+
+### Q8. "Vulnerability/emotion not coming through" 🟡
+
+PROBLEM: Mood words like "vulnerable" don't translate to visuals.
+
+CAUSE: Abstract mood ≠ physical instruction.
+
+SOLUTION: Translate emotion to BODY LANGUAGE + CONDITION:
+
+"Vulnerable":
+├── Posture: head lower than shoulders, gaze averted or down
+├── Tension: muscles not flexed, weight shifted to one side
+├── Condition: post-exertion (breath visible, sweat, dust on skin)
+├── Position: exposed (open stance, no defensive angles)
+└── Context: alone, no backup, aftermath not preparation
+
+"Exhausted":
+├── Posture: shoulders dropped, spine curved
+├── Eyes: half-lidded, unfocused
+├── Muscle state: slack, not engaged
+├── Breathing: visible, heavy, mouth open
+└── Position: leaning on support, or just stopped moving
+
+Add these PHYSICAL markers to VV, not just mood words.
+
+### Q9. "SHALLOW ARC S1→S2 too similar" 🟡
+
+NEW IN v1.7.1:
+
+PROBLEM: Commercial/scientific themes where S1 and S2 feel nearly identical.
+
+CAUSE: Same product, same studio, only crop/angle changes.
+
+SOLUTION: Between S1 and S2, vary at least 3 of these 5 categories:
+├── Setting context (cyclorama → marble vanity → lifestyle room)
+├── Light direction (overhead → side rim → backlit edge)
+├── Framing scale (full product → tight crop → environmental wide)
+├── Background treatment (gradient → solid → textured surface)
+└── Prop/surface interaction (floating → resting on → hand-held)
+
+❌ INSUFFICIENT: 
+S1: Product on cyclorama, overhead light, full frame
+S2: Product on cyclorama, overhead light, tight crop
+→ Only framing changed (1/5 categories)
+
+✅ SUFFICIENT:
+S1: Product on cyclorama, overhead light, full frame
+S2: Product on marble vanity, side rim light, tight crop  
+→ Setting + Light + Framing changed (3/5 categories)
+
+This ensures adjacent slots feel distinct even with same carrying image.
+
+### Q10. "Autopilot errors in long templates" 🔴
+
+NEW IN v1.7.2:
+
+PROBLEM: When writing 60+ fields, brain switches to "natural language"
+and banned words slip through.
+
+CAUSES:
+├── TIER 1 words are first to come to mind
+├── Abstractions seem "concrete enough"
+├── Process verbs seem "descriptive"
+└── Fatigue reduces attention to rules
+
+SYMPTOMS:
+├── "fine" appearing in textures (most common escape)
+├── "soft" appearing in light descriptions
+├── "smooth" appearing in surface descriptions
+├── "silence/stillness/transformation" in mood descriptions
+├── "creates/transforms" in behavior descriptions
+
+SOLUTION — TWO-PASS WRITING:
+
+PASS 1: Write content freely (don't think about bans)
+├── Focus on WHAT you're describing
+├── Use whatever words come naturally
+├── Complete all VV fields
+
+PASS 2: Systematic cleanup (I10 Pre-Output Scan)
+├── Ctrl+F for each banned word category
+├── Replace EVERY instance found
+├── Verify replacements don't introduce new bans
+
+PREVENTION:
+├── Keep Checklist open during writing
+├── After 30+ fields, take a break, then scan
+├── For each adjective ask: "Is there a measurable alternative?"
+├── For each noun ask: "Can I photograph this in close-up?"
+├── For each verb ask: "Is this a STATE or a PROCESS?"
+
+TRUST THE SCAN, NOT YOUR MEMORY.
+```
+
+---
+
+## BLOCK I: VALIDATION
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK I: VALIDATION
+═══════════════════════════════════════════════════════════════
+
+### I1. Completeness Check 🔴
+
+□ THEME filled with carrying image + condition?
+□ SETTING all fields addressed, including 2+ location alternatives?
+□ VISUAL_VOCABULARY 7/10 components minimum?
+□ MUST_INCLUDE 3+ items passing Photo Test?
+□ MUST_AVOID 3+ content categories + 2+ detail traps?
+□ SEEDS all 3 with required fields (as directions, not scenes)?
+□ LIGHT primary source defined without TIER 1 adjectives?
+□ TEXTURE minimum surfaces listed without TIER 1 adjectives?
+
+### I2. Coherence Check 🔴
+
+□ Single or clearly compound carrying image identifiable?
+□ If compound: S5 shows BOTH components absent?
+□ S4 passes Ring 3 test? (→ see F3 for full Ring classification)
+□ S5 trace test passed with Friend Test?
+□ Seeds set verified (locations/moods/families different)?
+□ Entry Angles different and properly typed (or blank)?
+□ Contrast levels distributed (max 2 same)?
+□ Lens diversity achieved (≥4 different)?
+□ If MODE 3: S1 literal scene photographable?
+□ If MODE 3: All elements present in S1 with ≥2 interactions?
+□ If MODE 3: Gradient plan consistent with resolution type?
+□ If MODE 3: Sentient elements safety-checked?
+□ If MODE 3: S4 physics violations ≤5? (NEW v1.8.0)
+□ If MODE 3: Dual-type elements resolved? (NEW v1.8.0)
+
+### I3. Compatibility Check 🔴
+
+□ LENS-ASPECT compatibility verified?
+  └── If CINE in sequence → ASPECT is 2.39:1 or 16:9?
+  └── If mismatch found → resolved before output?
+
+□ CONTRAST distribution valid?
+  └── Max 2 slots per H/M/L level?
+  └── If 3+ same level → revised or flagged?
+
+□ S5 ENVIRONMENTAL DEPARTURE satisfied? (→ see F4 for full rules)
+  └── Carrying image NOT visible (all components)?
+  └── Only traces remain?
+
+□ LENS-MAGIC compatibility verified? (NEW v1.6.1)
+  └── If magic requires face/eyes → slot lens can show face?
+  └── If TEXTURAL assigned → magic elements don't need face?
+
+□ SHALLOW ARC observation points documented? (NEW v1.7.1)
+  └── If commercial/scientific + PHOTO >2× → each has different observation point?
+  └── Observation points listed in seed directions?
+
+□ FRAME SCALE consistency verified? (NEW v1.7.2)
+  └── If FULL SCENE selected → all lenses 24-35mm environmental?
+  └── If MIXED → close-up slots documented?
+  └── No isolating telephoto (85mm+) unless explicitly approved?
+
+□ If MODE 3: Module D NOT active? (incompatible)
+□ If MODE 3: GOAL = artistic? (auto-converted if commercial/scientific)
+□ If MODE 3: Platform supports surreal? (DALL-E 3 warning)
+□ If MODE 3: S4 physics violations ≤5? (NEW v1.8.0)
+□ If MODE 3: Conflict Check passed? (→ see P1.5) (NEW v1.8.0)
+
+### I4. TIER 1 + MANDATORY LANGUAGE Final Scan 🔴
+
+Before outputting template, scan ALL text fields for:
+
+□ TIER 1 ADJECTIVES — → see D4 for full list and replacements
+□ CONDITIONAL PHRASES — → see D5 for banned/mandatory language
+□ MUST_INCLUDE uses MANDATORY language for critical elements
+
+If ANY found → rewrite BEFORE output.
+Print: "LANGUAGE CHECK: [PASS/FIXED: field X]"
+
+### I5. Detail Density Audit 🟡
+
+**COUNTING RULE (NEW v1.8.0):** Each word/phrase counts in ONE category only.
+"oxidized copper" = 1 material OR 1 condition, not both. Choose the most 
+specific category. When uncertain: material > condition > texture.
+
+Count per slot:
+□ Named materials (brass, limestone, crepe — not "metal, stone, fabric")
+□ Specific colors (crimson, gunmetal — not "red, gray")
+□ Physical measurements or scale references
+□ Texture descriptors (pitted, polished, weave tooth, pile direction)
+□ Light behavior terms (rim-lit, scattered, diffused, absorbed)
+□ Spatial prepositions (beneath, beside, leaning against)
+□ Condition indicators (compressed, oxidized, dust-covered)
+
+MINIMUM per slot:
+│ Slot │ Role      │ Min Details │
+├──────┼───────────┼─────────────┤
+│ S1   │ ANCHOR    │ ≥10         │
+│ S2   │ TILT      │ ≥8          │
+│ S3   │ ADJACENT  │ ≥9          │
+│ S4   │ OBLIQUE   │ ≥8          │
+│ S5   │ ABSENCE   │ ≥7          │
+
+### I6. Specificity Gradient Test 🟢
+
+For any noun in planned descriptions:
+Can you make it more specific WITHOUT adding words?
+
+"fabric" → "crepe" (same count, higher specificity)
+"red" → "crimson" (same count, higher specificity)
+"room" → "studio" (same count, higher specificity)
+"light" → "tungsten" (same count, higher specificity)
+
+If >3 nouns per slot could be upgraded → revise before generation.
+
+### I7. Quality Prediction 🟢
+
+│ Passed     │ Forecast │ Level         │
+├────────────┼──────────┼───────────────┤
+│ 58-64/64   │ 295+     │ 🏆 Exceptional │
+│ 50-57/64   │ 280-295  │ 🥇 Excellent   │
+│ 42-49/64   │ 270-280  │ 🥈 Good        │
+│ 33-41/64   │ 260-270  │ 🥉 Acceptable  │
+│ <33/64     │ <260     │ ❌ Needs work  │
+
+### I8. RERUN Check 🟢
+
+If repeating a theme — ALL must be DIFFERENT:
+□ Anchor composition
+□ All 3 seed directions (location + approach)
+□ Entry Angle pair
+□ Lens sequence (≥3 changes from previous)
+□ Primary light source or direction
+□ Dominant texture contrast
+□ Sensory marker manifestation (not just category)
+
+### I9. Magic/Signature Element Audit 🔴
+
+NEW IN v1.6.1:
+
+For each element marked as magic/signature/critical:
+
+□ Listed in MUST_INCLUDE with MANDATORY language?
+□ Slot coverage specified? (e.g., "S1, S2, S3")
+□ No conditional phrases? (see D5)
+□ Included in seed MANDATORY_ELEMENTS? (see F7)
+□ Compatible lens assigned to required slots? (see G6)
+
+If ANY check fails → fix before output.
+
+Print: "MAGIC ELEMENT AUDIT: [element] — [PASS/FIXED]"
+
+### I10. Pre-Output Scan 🔴
+
+NEW IN v1.7.2:
+
+MANDATORY before final template output. Run ALL scans:
+
+□ TIER 1 WORD SCAN (Ctrl+F across entire template):
+  Search: soft|fine|smooth|gentle|subtle|elegant|delicate|clean|fresh|simple
+  Found → replace BEFORE output
+  
+□ ABSTRACT NOUN SCAN (Ctrl+F):
+  Search: silence|stillness|tension|transformation|perfection|beauty|
+          harmony|balance|chaos|mystery|absence|void|presence|atmosphere
+  Found → replace with physical evidence
+  Test: "Can I photograph this noun in close-up?" NO → replace
+  
+□ BANNED VERB SCAN (Ctrl+F):
+  Search: creates|transforms|suggests|implies|evoking|establishes|
+          turning|making|becomes|emerging
+  Found → replace with "=" or state description
+  
+□ MODE 3 ADDITIONAL SCAN (if MODE 3 active):
+  Search: becoming|becomes|merging|fusing|blending|in process of|growing from
+  Found → replace with frozen state description
+  NOTE (v1.8.0): "becomes" is banned in MODE 3. Use "now [state]" or "in [state]".
+  
+□ VAGUE WORD SCAN (Ctrl+F):
+  Search: ancient|unnatural|wrong|strange|mysterious|varies|somehow
+  Found → replace with measurable/specific alternative
+  
+□ STRUCTURAL VERIFY:
+  □ ASPECT — single unified value for series? (not per-slot)
+  □ CONTRAST_LEVELS — max 2 slots at same level (H/M/L)?
+  □ LENS_SEQUENCE — min 4 different types, no type >2×?
+  □ PRIMARY — front-loaded in S1 opening sentence?
+  
+□ FRAME SCALE VERIFY (if discussed in interview):
+  □ All slots match selected scale (FULL SCENE / MIXED / CLOSE-UP)?
+  □ If FULL SCENE → no isolating focal lengths (85mm+)?
+  □ If FULL SCENE → all key objects visible every frame?
+
+Print results:
+PRE_OUTPUT_SCAN: {
+  TIER_1_WORDS: "PASS" or "FOUND AND FIXED: [list]"
+  ABSTRACT_NOUNS: "PASS" or "FOUND AND FIXED: [list]"
+  BANNED_VERBS: "PASS" or "FOUND AND FIXED: [list]"
+  MODE_3_BANS: "PASS" or "N/A" or "FOUND AND FIXED: [list]"
+  VAGUE_WORDS: "PASS" or "FOUND AND FIXED: [list]"
+  STRUCTURAL: "PASS — ASPECT unified, CONTRAST M×[n] H×[n] L×[n], LENS [n] different"
+  FRAME_SCALE: "FULL SCENE" or "MIXED: S[n] close" or "CLOSE-UP" or "N/A"
+  PRIMARY_FRONT_LOADED: "PASS — S1 opens with [element]" or "FIXED"
+}
+```
+
+---
+
+## BLOCK O: OUTPUT FORMAT
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK O: OUTPUT FORMAT
+═══════════════════════════════════════════════════════════════
+
+### O1. Mandatory Output Structure 🔴
+
+After completing all blocks, ALWAYS output the full theme 
+as a SINGLE CODE BLOCK in consolidated format.
+
+DO NOT output checklist blocks separately.
+DO NOT summarize — output complete filled template.
+
+### O2. Consolidated Theme Format 🔴
+
+Output MUST follow this exact structure:
+
+THEME: [one-line description]
+
+GOAL: [type]
+
+SETTING: {
+  UNIVERSE: [...]
+  GEOGRAPHY: {
+    PRIMARY: [...]
+    ALT_1: [...]
+    ALT_2: [...]
+  }
+  ERA: [...]
+  FACTION_POV: [...]
+  AESTHETIC: [...]
+  
+  MUST_INCLUDE: [...]  ← WITH MANDATORY LANGUAGE + SLOT SPECS
+  MUST_AVOID: [...]
+  
+  VISUAL_VOCABULARY: { ... }
+}
+
+LIGHT: { ... }
+
+TEXTURE_PALETTE: { ... }
+
+TEMPORAL: { ... }
+
+SEEDS: {
+  S3_ADJACENT: { 
+    direction: [...], 
+    MANDATORY_ELEMENTS: [...],
+    ... 
+  }
+  S4_OBLIQUE: { direction: [...], ring_check: "RING 3 — [reason]", ... }
+  S5_ABSENCE: { direction: [...], env_departure: "PASS — [reason]", ... }
+}
+
+ARC_PLANNING: {
+  ENTRY_ANGLES: [blank or S1=TYPE / S2=TYPE]
+  CONTRAST_PAIRS: [...]
+  LENS_SEQUENCE: [...] 
+  LENS_ASPECT_CHECK: "PASS" or "[slot] [lens] incompatible with [aspect] — RESOLVED: [action]"
+  LENS_MAGIC_CHECK: "PASS" or "[slot] [lens] incompatible with [element] — RESOLVED: [action]"
+  CONTRAST_LEVELS: [...] — must satisfy max 2 per level
+  SPATIAL_NOTES: [...]
+  SHALLOW_OBSERVATION_POINTS: "N/A" or "S1=[type], S2=[type], ..."
+  FRAME_SCALE: "FULL SCENE" or "MIXED: [details]" or "CLOSE-UP"
+}
+
+TECHNICAL: {
+  MODE: [...]
+  PLATFORM: [...]
+  ASPECT: [...]  ← SINGLE VALUE, not per-slot
+  PALETTE: [...]
+  MJ_LIMITS: {max_sent:[3,3,3,3,4], max_elem:5, version:"v6"}  ← omit for default
+}
+
+SESSION_HISTORY: {
+  S1_ANCHORS: "[lens used for S1 in this run]"
+  SEED2_CATEGORIES: "[category used for Seed 2 in this run]"
+}
+← NEW v1.8.0: Enables cross-session tracking in UPG v9.19+.
+   After UPG generates prompts, UPDATE these fields with actual values
+   and include in next run's input for RERUN diversity enforcement.
+
+SENSORY_MARKERS: {
+  S1: "[category]: [2-3 alternative manifestations]"
+  S2: "[category]: [2-3 alternative manifestations]"
+  ...
+}
+
+VALIDATION: {
+  CARRYING_IMAGE: [...]
+  COMPOUND_CHECK: "N/A" or "PRIMARY=[X], ATTRIBUTE=[Y], S5=BOTH ABSENT"
+  S4_RING_CHECK: "RING 3 — [different environment noted]"
+  S5_ENV_DEPARTURE: "PASS — [no component of carrying image visible]"
+  S5_FRIEND_TEST: "PASS — [reason traces are identifiable]"
+  LENS_ASPECT_COMPATIBILITY: "PASS" or "RESOLVED: [action taken]"
+  LENS_MAGIC_COMPATIBILITY: "PASS" or "RESOLVED: [action taken]"
+  CONTRAST_DISTRIBUTION: "PASS — [H×n, M×n, L×n, max 2 each]"
+  TIER_1_SCAN: "PASS" or "FIXED: [fields corrected]"
+  MANDATORY_LANGUAGE_SCAN: "PASS" or "FIXED: [fields corrected]"
+  MAGIC_ELEMENT_AUDIT: "[element]: PASS" (for each magic element)
+  SHALLOW_S1_S2_CHECK: "N/A" or "PASS — [3+ categories varied]"
+  FRAME_SCALE_CHECK: "PASS — [scale type], all slots compliant" or "FIXED: [changes]"
+  CONFLICT_CHECK: "PASS" or "RESOLVED: [issue] → [action]"  ← NEW v1.8.0 (MODE 3 only)
+  S4_PHYSICS_CAP: "N/A" or "PASS — [N] violations (max 5)"  ← NEW v1.8.0 (MODE 3 only)
+  
+  PRE_OUTPUT_SCAN: {
+    TIER_1_WORDS: "PASS" or "FOUND AND FIXED: [list]"
+    ABSTRACT_NOUNS: "PASS" or "FOUND AND FIXED: [list]"
+    BANNED_VERBS: "PASS" or "FOUND AND FIXED: [list]"
+    MODE_3_BANS: "PASS" or "N/A" or "FOUND AND FIXED: [list]"  ← v1.8.0: now includes "becomes"
+    VAGUE_WORDS: "PASS" or "FOUND AND FIXED: [list]"
+    STRUCTURAL: "PASS — ASPECT unified, CONTRAST [distribution], LENS [n] different"
+    FRAME_SCALE: "[selected type]"
+    PRIMARY_FRONT_LOADED: "PASS — S1 opens with [element]"
+  }
+  
+  DETAIL_COUNT_TARGET: [...]
+  UNIQUE_MATERIALS: [...]
+  UNIQUE_COLORS: [...]
+  UNIQUE_TEXTURES: [...]
+  MODULE_C_REQUIRED: [YES/NO + reason if yes]
+}
+
+### O3. Format Rules 🔴
+
+□ Single code block (``` delimiters)
+□ No markdown headers inside block
+□ Nested braces for hierarchy
+□ Arrays in square brackets
+□ One field per line for readability
+□ Complete — no "[see above]" references
+□ Self-contained — can be copy-pasted to new chat
+□ All validation checks shown with PASS/FIXED status
+□ PRE_OUTPUT_SCAN block mandatory (NEW v1.7.2)
+
+### O4. Post-Block Confirmation 🟡
+
+After code block, print:
+
+**✅ Шаблон готов.**
+
+**Проверки пройдены:**
+├── TIER 1 Scan: [PASS/FIXED]
+├── Abstract Noun Scan: [PASS/FIXED]
+├── Banned Verb Scan: [PASS/FIXED]
+├── MODE 3 Bans: [PASS/FIXED/N/A] (incl. "becomes")
+├── Vague Words: [PASS/FIXED]
+├── Mandatory Language Scan: [PASS/FIXED]
+├── Lens-Aspect: [PASS/RESOLVED]
+├── Lens-Magic: [PASS/RESOLVED]
+├── Contrast Distribution: [PASS]
+├── S4 Ring Test: [RING 3]
+├── S5 Environmental Departure: [PASS]
+├── Magic Element Audit: [PASS/FIXED]
+├── Frame Scale: [FULL SCENE/MIXED/CLOSE-UP]
+├── Primary Front-Loaded: [PASS/FIXED]
+├── SHALLOW Observation Points: [N/A/PASS]
+├── SHALLOW S1→S2 Uniqueness: [N/A/PASS]
+├── Conflict Check: [PASS/RESOLVED/N/A]
+├── S4 Physics Cap: [N/A or N≤5]
+
+**Следующие шаги:**
+1. Скопируй код-блок выше
+2. Открой новый чат с UPG v9.19+
+3. Вставь как STRUCTURED THEME INPUT
+4. UPG сгенерирует 5 промптов
+5. После генерации: обнови SESSION_HISTORY значениями из результата
+
+**Или:**
+└── Попроси изменить что-то в шаблоне
+```
+
+---
+
+## BLOCK P: PERMUTATION MODE (MODE 3)
+
+```
+═══════════════════════════════════════════════════════════════
+## BLOCK P: PERMUTATION MODE (MODE 3)
+═══════════════════════════════════════════════════════════════
+
+### P0. Activation & Interview Override 🔴
+
+When user provides multiple nouns/elements instead of single theme:
+
+DETECT: Input contains "|" separator, comma-list of unrelated nouns,
+        or explicit "remix" / "permutation" / "combine these" language
+
+ACTION: 
+  → Skip BLOCK A (GOAL auto-set to artistic)
+  → Skip BLOCK B (no single carrying image)
+  → Skip BLOCK F (no seeds — replaced by directives)
+  → Run BLOCK P interview instead
+  → Then proceed to BLOCKS G, H, L, X as applicable
+
+INTERVIEW PHASE 1 opens with:
+  "Detected [N] elements for MODE 3 REMIX. 
+   Starting permutation interview..."
+
+EXCEPTION: If user says "SKIP" / "DEFAULTS" / "СРАЗУ":
+  → Auto-fill all P fields with defaults
+  → Generate template immediately
+
+### P1. Elements 🔴
+
+Collect N nouns/phenomena (2-10):
+
+FORMAT: [A] | [B] | [C] | ...
+
+Ask user to provide OR extract from input.
+
+FOR EACH ELEMENT, silent pre-check:
+□ Object/creature/phenomenon → accept
+□ Abstraction → suggest visual marker, confirm
+□ Action/verb → suggest frozen moment, confirm  
+□ Location → suggest synecdoche, confirm
+□ Negative → suggest boundary/effect, confirm
+□ DUAL-TYPE (NEW v1.8.0) → element is BOTH abstract AND location/action:
+  e.g. "Abyss" = abstract concept + physical location
+  → Apply BOTH transforms, present options to user:
+  "«[element]» can be read as [type A] or [type B].
+   Option 1: [transform A] (visual marker for abstract)
+   Option 2: [transform B] (synecdoche for location)
+   Which works better for your scene?"
+
+If abstraction detected, ask:
+  "[element] is abstract. Default marker: [suggestion].
+   Use this, or provide your own? 
+   Format: '[element] (your visual description)'"
+
+If >7 elements:
+  "⚠️ [N] elements may overload S1. Consider reducing to 5-7.
+   Continue anyway?"
+
+If <2 elements:
+  "Need minimum 2 elements. Add more."
+
+VALIDATION PRINTS:
+  [ABSTRACTION: "[X]" → "[marker]"] (for each)
+  [ACTION FROZEN: "[X]" → "[state]"] (for each)
+  [LOCATION: "[X]" → "[synecdoche]"] (for each)
+  [DUAL-TYPE: "[X]" → "[chosen transform]"] (for each)
+
+### P1.5 Conflict Check 🔴
+
+NEW IN v1.8.0:
+
+After collecting elements but BEFORE proceeding to P2, verify compatibility:
+
+□ MODE 3 + GOAL commercial/scientific?
+  → Warn: "MODE 3 incompatible with commercial/scientific GOAL.
+     Auto-converting to artistic. Proceed?"
+  
+□ MODE 3 + Module D active?
+  → Block: "MODE 3 incompatible with Module D (narrative arc).
+     Choose one: MODE 3 (remix) or MODE 2 (narrative)?"
+
+□ MODE 3 + SHALLOW ARC?
+  → Warn: "SHALLOW ARC incompatible with REMIX.
+     Converting to FULL ARC (artistic). Proceed?"
+
+□ DALL-E 3 as PLATFORM?
+  → Warn: "DALL-E 3 has poor MODE 3 support (literal interpretation).
+     Recommend Flux or MJ. Continue anyway?"
+
+□ Elements contain hostile pairs? (fire+ice, giant+microscopic)
+  → Note: "Hostile pair detected: [A]+[B]. S1 scene may need 
+     creative location. Will address in P4."
+
+Print: [CONFLICT CHECK: PASS] or [CONFLICT CHECK: [issue] — RESOLVED: [action]]
+
+### P2. Primary Element 🟡
+
+□ First in list = primary (default)
+□ "NONE" — all elements rotate equally
+□ Specific: [element name]
+
+Ask: "Should one element dominate, or all equal?"
+
+If user unsure → default to first in list.
+
+### P3. Sentient Element Check 🔴
+
+FOR EACH ELEMENT:
+  Is it a person, animal, or creature with agency?
+  
+  □ NO → skip
+  □ YES → apply safety constraints:
+    - S3: identity preserved (face/silhouette recognizable)
+    - S4: no dismemberment, no violence, no dehumanization
+    - S5 COLLAPSE: partner in hybrid, not victim
+    - S5 ABSENCE: traces = clothing/warmth/impression, not body parts
+    
+  Print: [SENTIENT: "[element]" — safety constraints applied]
+  
+  If 2+ sentient elements interact in S4:
+    "⚠️ Multiple sentient elements in ABSURD may create 
+     disturbing fusion. Module C redirect available if needed."
+
+### P4. Literal Scene (S1) 🔴
+
+Find ONE realistic scene where ALL elements coexist:
+
+□ Location: [specific place where all could be]
+□ Time: [when this scene could happen]
+□ Interactions (minimum 2):
+  [A]──[relationship]──[B]
+  [C]──[relationship]──[D]
+
+RELATIONSHIP TYPES:
+  PHYSICAL: touches / holds / contains / supports
+  OPTICAL: reflects / shadows / illuminates
+  SPATIAL: above / inside / through / beside
+  CAUSAL: causes / prevents
+
+□ Photo Test: Could a photographer capture this? YES/NO
+  If NO → revise location until YES
+
+DENSITY RULES:
+  2-4 elements: ALL must be ACTIVE (interacting)
+  5-7 elements: 3-4 ACTIVE, rest PRESENT (visible, background)
+  8-10 elements: 3-4 ACTIVE, 3-4 PRESENT, rest IMPLIED
+
+Ask user:
+  "Where could [element list] all exist together in real life?
+   I suggest: [auto-suggestion]. Works, or different idea?"
+
+Print: [S1 SCENE: "[description]" — LITERAL TEST: PASS]
+
+### P5. Gradient 🟡
+
+How does strangeness escalate across the series?
+
+□ SMOOTH (default) — gradual: 0 → 1 → 2-3 → 3+ → full
+□ SHARP — sudden break: real → real → FULL SURREAL → absurd → collapse
+□ REVERSE — chaos first: full → 3+ → 2-3 → 1 → 0 (reality at end)
+□ PEAK — mountain: 0 → 2 → FULL → 2 → 0 (peak at S3)
+□ VALLEY — dip: full → 1 → 0 → 1 → full (reality as strange moment)
+
+Ask: "How should strangeness build?
+      Default is SMOOTH (gradual escalation). 
+      Other options: SHARP, REVERSE, PEAK, VALLEY."
+
+If user unsure → SMOOTH.
+
+### P6. S5 Resolution 🔴
+
+How does the series end?
+
+□ COLLAPSE (default) — all elements merge into single hybrid entity
+  Each element contributes one identifiable feature to hybrid
+
+□ ABSENCE — all elements gone, only traces remain
+  Environmental departure: elements NOT visible, only evidence
+
+□ MATRYOSHKA — elements nested inside each other (A contains B contains C...)
+  Each layer visible (cutaway/transparency)
+
+□ EXPLOSION — all elements fragmented, pieces scattered and intermixed
+  Fragment zones where different elements mix
+
+□ LOOP — S5 = S1 with all roles inverted
+  Creates cycle implication (eternal return)
+
+Ask: "How should the series resolve?
+      COLLAPSE (merge into one) is default.
+      Options: ABSENCE, MATRYOSHKA, EXPLOSION, LOOP."
+
+COMPOUND CHECK (if ABSENCE selected):
+  □ For each element: what TRACE does it leave?
+  □ Traces must be specific, not generic
+  □ Friend Test: stranger identifies theme from traces in 30 sec?
+  
+  Ask: "If all [N] elements disappear, what physical evidence 
+       remains for each?"
+
+### P7. S5 Tone 🟡
+
+What emotion does S5 carry?
+
+□ WONDER — awe at what merged/appeared (default for COLLAPSE)
+□ DREAD — unsettling result
+□ MELANCHOLY — beautiful loss (default for ABSENCE)
+□ RELIEF — burden lifted
+□ VERTIGO — infinite depth/recursion (good for MATRYOSHKA)
+□ LIBERATION — explosion as freedom (good for EXPLOSION)
+□ TRAP — cycle as prison (good for LOOP)
+□ ACCEPTANCE — cycle as peace (good for LOOP)
+
+Ask: "What should the viewer feel at S5?
+      Default: WONDER (for COLLAPSE) or MELANCHOLY (for ABSENCE)."
+
+If user unsure → use default per resolution type.
+
+### P8. Coherence Thread 🟡
+
+What holds the series together visually?
+
+□ PALETTE: "[specific color family across all 5]"
+□ TIME: "[same time of day in all 5]"
+□ TEXTURE: "[material quality in every surface]"
+□ ELEMENT_ANCHOR: "[one element keeps its form/color]"
+□ TEMPERATURE: "[warm/cool tone throughout]"
+
+Multiple allowed (max 3, different categories).
+
+Ask: "What visual thread connects all 5 images?
+      I suggest: [auto-derived from elements]. 
+      Works, or specify?"
+
+CONFLICT CHECK:
+  Does coherence conflict with any element?
+  If YES → adapt element presentation or modify thread.
+  Print: [COHERENCE ADAPTED: "[element]" → "[adaptation]"]
+
+### P9. Mutation Plan 🟡
+
+Plan the escalation specifics:
+
+S2 — SHIFTED (exactly 1 strangeness):
+  □ Which element mutates first? ___
+  □ Mutation type:
+    PROPERTY_TRANSFER (gains property of another element)
+    BEHAVIOR_CHANGE (acts unlike itself)
+    SCALE_SHIFT (grows/shrinks impossibly)
+    MATERIAL_SHIFT (changes substance)
+  
+  Ask: "Which element should act strange first in S2?
+        Default: [auto-selected]. Or choose."
+
+S3 — SURREAL (2-3 role swaps):
+  □ Which elements swap roles? ___
+  □ Spatial violation (optional): ___
+  
+  Roles: SUBJECT / OBJECT / LOCATION / INSTRUMENT / MATERIAL
+  Violations: Inside-out / Gravity defiance / Scale coexistence
+  
+  Ask: "In S3, which elements should swap jobs?
+        Example: [A] takes the role of location, [B] takes the role of subject."
+
+S4 — ABSURD (3-5 physics breaks, cap 5):
+  □ List violations: ___ (maximum 5, each describable in one sentence)
+  □ Material exchanges? ___
+  □ Identity blurs? ___
+  
+  Violation types: Gravity / Containment / Material / Scale / Time / Reflection
+  CAP RULE (NEW v1.8.0): More than 5 violations makes scene unrenderable.
+  Each violation must be expressible as ONE sentence. If you can't describe 
+  it in one sentence → it's too complex, simplify.
+  
+  Ask: "What physics should break in S4? (pick 3-5, max 5)
+        Examples: objects fall sideways, materials exchange, 
+        reflections show different content."
+
+### P10. Frame Scale 🔴
+
+NEW IN v1.7.2:
+
+MODE 3 default: ALL frames = FULL SCENE.
+
+Ask:
+  "Each frame shows the COMPLETE scene with all elements visible,
+   or are close-ups on individual elements allowed?"
+
+□ FULL SCENE (default for MODE 3):
+  ├── All slots: 24-35mm environmental focal lengths
+  ├── All elements visible in every frame
+  ├── Difference between slots: transformation STATE, not camera DISTANCE
+  ├── LENS_SEQUENCE: all ENVIRONMENTAL or CINE wide
+  └── No isolating telephoto (85mm+)
+
+□ MIXED SCALE:
+  ├── Specify which slots allow close-up: S[n], S[n]
+  ├── Close-up slots: PHOTO lens, 85mm+ acceptable
+  ├── Full-scene slots: ENVIRONMENTAL lens, 24-35mm
+  └── Document in LENS_SEQUENCE
+
+□ CLOSE-UP DOMINANT:
+  ├── Rare for MODE 3 — interactions less visible
+  ├── Requires justification (macro details > context)
+  └── Warning: element relationships harder to show
+
+Print: [FRAME SCALE: FULL SCENE / MIXED (S[n] close) / CLOSE-UP]
+
+LENS_SEQUENCE must match FRAME_SCALE:
+├── FULL SCENE → all wide (24-35mm), ENVIRONMENTAL/CINE
+├── MIXED → document per-slot
+└── CLOSE-UP → PHOTO/TEXTURAL dominant
+
+### P11. Primary Front-Loading Check 🔴
+
+NEW IN v1.7.2:
+
+If PRIMARY element specified (P2):
+  □ S1 opening sentence MUST begin with PRIMARY element
+  □ Not buried in middle of sentence
+  □ Not after location/time/other elements
+
+Example (PRIMARY = Propeller):
+  ❌ "Open hill field under eclipse, Dutch windmill with propeller..."
+  ✅ "Three-blade aluminum propeller mounted on Dutch windmill cap..."
+  
+  ❌ "The scene shows a field where a propeller..."
+  ✅ "Propeller blades catch eclipse light as they rotate..."
+
+Ask during template generation:
+  "PRIMARY is [element]. S1 will open with [element] as first concrete noun.
+   Confirm or suggest different opening?"
+
+Print: [PRIMARY FRONT-LOADED: S1 opens with "[element]"]
+```
+
+---
+
+═══════════════════════════════════════════════════════════════
+## BLOCK R: QUICK REFERENCE TABLES
+═══════════════════════════════════════════════════════════════
+
+### R1. TIER 1 Replacement Quick Reference 🟡
+
+│ Banned      │ Replacements                                    │
+├─────────────┼─────────────────────────────────────────────────┤
+│ soft        │ diffused / muted / low-contrast / Shore A [N]  │
+│ fine        │ hairline / narrow / particulate / [measurement]│
+│ smooth      │ polished / satin / even-finish / [finish spec] │
+│ gentle      │ gradual / low-angle / [degree]                 │
+│ subtle      │ understated / hint-of / [percentage]           │
+│ elegant     │ proportioned / balanced / [geometric relation] │
+│ delicate    │ thin-walled / lightweight / [thickness]        │
+│ clean       │ uncluttered / minimal / [specific absence]     │
+│ fresh       │ recently-cut / undried / [time since]          │
+│ simple      │ single-element / unadorned / [component count] │
+
+### R2. Abstract Noun Replacement Quick Reference 🟡
+
+│ Banned         │ Replace with physical evidence              │
+├────────────────┼─────────────────────────────────────────────┤
+│ silence        │ no motion blur / particles frozen / no ripples │
+│ stillness      │ suspended particles / sharp-edged frozen objects │
+│ tension        │ taut cables / flexed muscles / bent material │
+│ transformation │ visible pressure waves / material state change │
+│ perfection     │ mathematical symmetry / [count] identical units │
+│ beauty         │ [specific physical features]                │
+│ harmony        │ aligned angles / matched colors / parallel lines │
+│ balance        │ equal weight distribution / centered mass   │
+│ chaos          │ scattered fragments / random orientations   │
+│ mystery        │ obscured by [fog/shadow/angle]              │
+│ absence        │ empty space where [X] was / [trace type]    │
+│ presence       │ visible figure / occupied space / shadow cast │
+│ atmosphere     │ visible particles / haze density / humidity on surfaces │
+
+### R3. Banned Verb Replacement Quick Reference 🟡
+
+│ Banned      │ Replacements                                    │
+├─────────────┼─────────────────────────────────────────────────┤
+│ creates     │ = / produces / generates / visible as          │
+│ transforms  │ alters / shifts / = [new state]                │
+│ suggests    │ resembles / matches / shows                    │
+│ implies     │ indicates / shows evidence of                  │
+│ evoking     │ resembling / matching / structured like        │
+│ establishes │ shows / displays / presents                    │
+│ turning     │ now [state] / is now [state] / shifted to     │
+│ making      │ rendering / leaving / resulting in             │
+│ becomes     │ now [state] / = [state] / in [state] (MODE 3: always ban) │
+│ emerging    │ visible from / extending from / partially out of │
+
+### R4. Entry Angle Quick Reference 🟢
+
+│ Angle       │ Opens with                    │ Example                    │
+├─────────────┼───────────────────────────────┼────────────────────────────┤
+│ SCALE       │ number/dimension              │ "Fifteen-meter..."         │
+│ TIME        │ temporal marker               │ "By third week..."         │
+│ LOCATION    │ place preposition             │ "At crater's edge..."      │
+│ WEATHER     │ weather state                 │ "Through morning fog..."   │
+│ CULTURAL    │ cultural element              │ "Shimenawa wraps..."       │
+│ MATERIAL    │ material as subject           │ "Oxidized copper..."       │
+│ PERSPECTIVE │ vantage indicator             │ "From above..."            │
+│ ACTIVITY    │ frozen action                 │ "Mid-pour..."              │
+
+### R5. Lens-Aspect Compatibility Quick Reference 🟢
+
+│ Lens          │ Compatible Aspects              │ Focal Length Range │
+├───────────────┼─────────────────────────────────┼────────────────────┤
+│ ENVIRONMENTAL │ 16:9, 3:2, 2.39:1               │ 24-35mm            │
+│ CINE          │ 2.39:1, 2.00:1, 16:9 ONLY       │ 35-50mm anamorphic │
+│ PHOTO         │ Any                             │ 35-85mm            │
+│ TEXTURAL      │ Any (macro framing)             │ 100mm+ macro       │
+│ PAINTERLY     │ Any                             │ N/A                │
+│ SYMBOLIC      │ 1:1, 4:5 preferred              │ N/A                │
+│ MINIMAL       │ Any                             │ N/A                │
+│ SENSORY       │ Any                             │ 24-50mm            │
+│ GRAPHIC       │ Any                             │ N/A                │
+
+### R6. MODE 3 Gradient Quick Reference 🟢
+
+S4 physics violations capped at 5 (NEW v1.8.0).
+
+│ Gradient │ S1      │ S2       │ S3        │ S4          │ S5       │
+├──────────┼─────────┼──────────┼───────────┼──────────┼──────────┤
+│ SMOOTH   │ 0 weird │ 1 weird  │ 2-3 weird │ 3+ weird │ resolved │
+│ SHARP    │ 0 weird │ 0 weird  │ FULL SURR │ absurd   │ resolved │
+│ REVERSE  │ full    │ 3+ weird │ 2-3 weird │ 1 weird  │ 0 weird  │
+│ PEAK     │ 0 weird │ 2 weird  │ FULL SURR │ 2 weird  │ 0 weird  │
+│ VALLEY   │ weird   │ weirder  │ 0 REAL    │ chaos    │ resolved │
+
+### R7. S5 Resolution Quick Reference 🟢
+
+│ Resolution  │ What happens                    │ Default Tone │
+├─────────────┼─────────────────────────────────┼──────────────┤
+│ COLLAPSE    │ All elements merge into hybrid  │ WONDER       │
+│ ABSENCE     │ All elements gone, traces only  │ MELANCHOLY   │
+│ MATRYOSHKA  │ Elements nested inside each other│ VERTIGO      │
+│ EXPLOSION   │ All fragmented and scattered    │ LIBERATION   │
+│ LOOP        │ S5 = S1 with roles inverted     │ TRAP         │
+
+### R8. MODE 3 Compatibility Quick Reference 🟢
+
+NEW IN v1.8.0:
+
+│ Setting        │ MODE 3 Compatible? │ Action                        │
+├────────────────┼────────────────────┼───────────────────────────────┤
+│ GOAL artistic  │ ✅ Yes             │ Proceed                       │
+│ GOAL commercial│ ⚠️ Convert         │ Auto-convert to artistic+warn │
+│ GOAL scientific│ ⚠️ Convert         │ Auto-convert to artistic+warn │
+│ Module A       │ ✅ Yes             │ Proceed                       │
+│ Module B       │ ⚠️ Constrained     │ Product S1-S3 only            │
+│ Module C       │ ✅ Auto            │ NSFW redirect auto            │
+│ Module D       │ ❌ Incompatible    │ Choose MODE 2 or MODE 3       │
+│ SHALLOW ARC    │ ❌ Incompatible    │ Convert to FULL→REMIX         │
+│ DALL-E 3       │ ⚠️ Poor            │ Warn, recommend Flux/MJ       │
+│ S4 violations  │ Cap 5              │ Each in one sentence          │
+
+### R9. Session History Usage 🟢
+
+NEW IN v1.8.0:
+
+WORKFLOW:
+1. Checklist generates template with empty SESSION_HISTORY
+2. Paste template to UPG → UPG generates 5 prompts
+3. From UPG output, note: S1 lens used + Seed 2 category
+4. Update SESSION_HISTORY in template:
+   SESSION_HISTORY: {
+     S1_ANCHORS: "[lens from step 3]"
+     SEED2_CATEGORIES: "[category from step 3]"
+   }
+5. On RERUN, paste updated template → UPG enforces diversity
